@@ -1,2 +1,2 @@
 print('first commit');
-print()'hello Git');
+print('hello Git');
