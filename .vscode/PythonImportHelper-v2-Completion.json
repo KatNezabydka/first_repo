@@ -1,0 +1,1107 @@
+[
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "setup",
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "isExtraImport": true,
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
+        "label": "setup",
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "isExtraImport": true,
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
+        "label": "setup",
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "isExtraImport": true,
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "getcontext",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "collections",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "collections",
+        "description": "collections",
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "factorial",
+        "kind": 2,
+        "importPath": "all.factorial",
+        "description": "all.factorial",
+        "peekOfCode": "def factorial(n):\n    \"\"\"\n    Рекурсивна функція для обчислення факторіала з використанням мемоізації.\n    \"\"\"\n    if n <= 1:\n        return 1\n    else:\n        return n * factorial(n - 1)\ndef number_of_groups(n, k):\n    \"\"\"",
+        "detail": "all.factorial",
+        "documentation": {}
+    },
+    {
+        "label": "number_of_groups",
+        "kind": 2,
+        "importPath": "all.factorial",
+        "description": "all.factorial",
+        "peekOfCode": "def number_of_groups(n, k):\n    \"\"\"\n    Функція для обчислення кількості різних списків переможців при розіграші.\n    :param n: Загальна кількість людей (випадків).\n    :param k: Кількість людей, які отримали призи.\n    :return: Кількість різних списків переможців.\n    \"\"\"\n    return factorial(n) // (factorial(n - k) * factorial(k))",
+        "detail": "all.factorial",
+        "documentation": {}
+    },
+    {
+        "label": "parse_folder",
+        "kind": 2,
+        "importPath": "all.functions",
+        "description": "all.functions",
+        "peekOfCode": "def parse_folder(path):\n    \"\"\"\n    Функція для аналізу вмісту директорії та розподілу файлів і піддиректорій.\n    :param path: Об'єкт Path, представляючий шлях до директорії.\n    :return: Кортеж із двох списків — список файлів та список директорій у директорії path.\n    \"\"\"\n    if not path.is_dir():\n        raise ValueError(\"Параметр 'path' повинен бути об'єктом Path, який представляє директорію.\")\n    files = []\n    directories = []",
+        "detail": "all.functions",
+        "documentation": {}
+    },
+    {
+        "label": "folder_path",
+        "kind": 5,
+        "importPath": "all.functions",
+        "description": "all.functions",
+        "peekOfCode": "folder_path = Path(\"/Users/kornyshevaekaterina/Documents/GoIt/Projects/first_repo\")\nresult = parse_folder(folder_path)\nprint(\"Список файлів:\", result[0])\nprint(\"Список директорій:\", result[1])",
+        "detail": "all.functions",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "all.functions",
+        "description": "all.functions",
+        "peekOfCode": "result = parse_folder(folder_path)\nprint(\"Список файлів:\", result[0])\nprint(\"Список директорій:\", result[1])",
+        "detail": "all.functions",
+        "documentation": {}
+    },
+    {
+        "label": "l",
+        "kind": 5,
+        "importPath": "all.list",
+        "description": "all.list",
+        "peekOfCode": "l = [15, 2, 3]\nl.reverse()\nprint(l)\nchars = [3, 6, 1]\nchars.sort()\nprint(chars) # ['a', 'b', 'z']",
+        "detail": "all.list",
+        "documentation": {}
+    },
+    {
+        "label": "chars",
+        "kind": 5,
+        "importPath": "all.list",
+        "description": "all.list",
+        "peekOfCode": "chars = [3, 6, 1]\nchars.sort()\nprint(chars) # ['a', 'b', 'z']",
+        "detail": "all.list",
+        "documentation": {}
+    },
+    {
+        "label": "cost_delivery",
+        "kind": 2,
+        "importPath": "all.main copy",
+        "description": "all.main copy",
+        "peekOfCode": "def cost_delivery(quantity, *_, discount=0):\n    \"\"\"Функція повертає суму за доставлення замовлення.\n     Перший параметр &mdash; кількість товарів в замовленні.\n     Параметр знижки discount, який передається лише як ключовий, за замовчуванням має значення 0.\"\"\"\n    return (5 + 2 * (quantity - 1)) * (1 - discount)\ndef amount_payment(payment):\n    \"\"\"\n    Функція підсумовує значення платежів зі списку.\n    :param payment_list: Список платежів, де додатні значення - це суми для сплати,\n                        від'ємні - це переплати.",
+        "detail": "all.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "amount_payment",
+        "kind": 2,
+        "importPath": "all.main copy",
+        "description": "all.main copy",
+        "peekOfCode": "def amount_payment(payment):\n    \"\"\"\n    Функція підсумовує значення платежів зі списку.\n    :param payment_list: Список платежів, де додатні значення - це суми для сплати,\n                        від'ємні - це переплати.\n    :return: Сума платежів наприкінці місяця.\n    \"\"\"\n    return sum(payment for payment in payment_list if payment > 0) \ndef prepare_data(data):\n    \"\"\"",
+        "detail": "all.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "prepare_data",
+        "kind": 2,
+        "importPath": "all.main copy",
+        "description": "all.main copy",
+        "peekOfCode": "def prepare_data(data):\n    \"\"\"\n    Функція видаляє найбільше та найменше значення з переданого списку,\n    сортує його в порядку зростання і повертає змінений список.\n    :param data: Список числових значень.\n    :return: Змінений список без найбільшого та найменшого значень, відсортований.\n    \"\"\"\n    data.remove(max(data))\n    data.remove(min(data))\n    sorted_data = sorted(data)",
+        "detail": "all.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "lookup_key",
+        "kind": 2,
+        "importPath": "all.main copy",
+        "description": "all.main copy",
+        "peekOfCode": "def lookup_key(data, value):\n    return [key for key, val in data.items() if val == value]\n# Приклад використання\nmy_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 2, 'e': 1}\nsearch_value = 2\nresult = lookup_key(my_dict, search_value)\nprint(f\"Ключі для значення {search_value}: {result}\")",
+        "detail": "all.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "input_data",
+        "kind": 5,
+        "importPath": "all.main copy",
+        "description": "all.main copy",
+        "peekOfCode": "input_data = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]\nresult = prepare_data(input_data)\nprint(result)    \ndef lookup_key(data, value):\n    return [key for key, val in data.items() if val == value]\n# Приклад використання\nmy_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 2, 'e': 1}\nsearch_value = 2\nresult = lookup_key(my_dict, search_value)\nprint(f\"Ключі для значення {search_value}: {result}\")",
+        "detail": "all.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "all.main copy",
+        "description": "all.main copy",
+        "peekOfCode": "result = prepare_data(input_data)\nprint(result)    \ndef lookup_key(data, value):\n    return [key for key, val in data.items() if val == value]\n# Приклад використання\nmy_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 2, 'e': 1}\nsearch_value = 2\nresult = lookup_key(my_dict, search_value)\nprint(f\"Ключі для значення {search_value}: {result}\")",
+        "detail": "all.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "my_dict",
+        "kind": 5,
+        "importPath": "all.main copy",
+        "description": "all.main copy",
+        "peekOfCode": "my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 2, 'e': 1}\nsearch_value = 2\nresult = lookup_key(my_dict, search_value)\nprint(f\"Ключі для значення {search_value}: {result}\")",
+        "detail": "all.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "search_value",
+        "kind": 5,
+        "importPath": "all.main copy",
+        "description": "all.main copy",
+        "peekOfCode": "search_value = 2\nresult = lookup_key(my_dict, search_value)\nprint(f\"Ключі для значення {search_value}: {result}\")",
+        "detail": "all.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "all.main copy",
+        "description": "all.main copy",
+        "peekOfCode": "result = lookup_key(my_dict, search_value)\nprint(f\"Ключі для значення {search_value}: {result}\")",
+        "detail": "all.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "parse_args",
+        "kind": 2,
+        "importPath": "module_4.10",
+        "description": "module_4.10",
+        "peekOfCode": "def parse_args():\n    result = \"\"\n    args_without_script_name = sys.argv[1:]\n    return ' '.join(args_without_script_name)\nargs_string = parse_args()\nprint(\"Command line arguments:\", args_string)",
+        "detail": "module_4.10",
+        "documentation": {}
+    },
+    {
+        "label": "args_string",
+        "kind": 5,
+        "importPath": "module_4.10",
+        "description": "module_4.10",
+        "peekOfCode": "args_string = parse_args()\nprint(\"Command line arguments:\", args_string)",
+        "detail": "module_4.10",
+        "documentation": {}
+    },
+    {
+        "label": "prepare_data",
+        "kind": 2,
+        "importPath": "module_4.2",
+        "description": "module_4.2",
+        "peekOfCode": "def prepare_data(data):\n    return sorted(data)[1:-1]\nprint(prepare_data([3,2,5,1]))",
+        "detail": "module_4.2",
+        "documentation": {}
+    },
+    {
+        "label": "game",
+        "kind": 2,
+        "importPath": "module_4.6",
+        "description": "module_4.6",
+        "peekOfCode": "def game(terra, power):\n    for sublist in terra:\n        for energy_value in sublist:\n            if energy_value <= power:\n                power += energy_value\n            else:\n                break\n    return power\nexample_list = [[1, 1, 5, 10], [10, 2], [1, 1, 1]]\ninitial_power = 1",
+        "detail": "module_4.6",
+        "documentation": {}
+    },
+    {
+        "label": "example_list",
+        "kind": 5,
+        "importPath": "module_4.6",
+        "description": "module_4.6",
+        "peekOfCode": "example_list = [[1, 1, 5, 10], [10, 2], [1, 1, 1]]\ninitial_power = 1\ntotal_energy_received = game(example_list, initial_power)\nprint(\"Total energy received:\", total_energy_received)",
+        "detail": "module_4.6",
+        "documentation": {}
+    },
+    {
+        "label": "initial_power",
+        "kind": 5,
+        "importPath": "module_4.6",
+        "description": "module_4.6",
+        "peekOfCode": "initial_power = 1\ntotal_energy_received = game(example_list, initial_power)\nprint(\"Total energy received:\", total_energy_received)",
+        "detail": "module_4.6",
+        "documentation": {}
+    },
+    {
+        "label": "total_energy_received",
+        "kind": 5,
+        "importPath": "module_4.6",
+        "description": "module_4.6",
+        "peekOfCode": "total_energy_received = game(example_list, initial_power)\nprint(\"Total energy received:\", total_energy_received)",
+        "detail": "module_4.6",
+        "documentation": {}
+    },
+    {
+        "label": "is_valid_pin_codes",
+        "kind": 2,
+        "importPath": "module_4.7",
+        "description": "module_4.7",
+        "peekOfCode": "def is_valid_pin_codes(pin_codes):\n    if not pin_codes:\n        return False\n    exist_pins = set()\n    for pin in pin_codes:\n        if not (len(pin) == 4 and pin.isdigit()):\n            return False\n        if pin in exist_pins:\n            return False\n        exist_pins.add(pin)",
+        "detail": "module_4.7",
+        "documentation": {}
+    },
+    {
+        "label": "pin_list",
+        "kind": 5,
+        "importPath": "module_4.7",
+        "description": "module_4.7",
+        "peekOfCode": "pin_list = ['1101', '9034', '0011']\nif is_valid_pin_codes(pin_list):\n     print(\"The list of pin codes is valid.\")\nelse:\n    print(\"The list of pin codes is not valid.\")",
+        "detail": "module_4.7",
+        "documentation": {}
+    },
+    {
+        "label": "is_valid_password",
+        "kind": 2,
+        "importPath": "module_4.8",
+        "description": "module_4.8",
+        "peekOfCode": "def is_valid_password(password):\n    if not password or len(password) < 8:\n        return False\n    has_upper = any(char.isupper() for char in password)\n    has_lower = any(char.islower() for char in password)\n    has_digit = any(char.isdigit() for char in password)\n    return has_upper and has_lower and has_digit\n    return True\npassword = \"Password123\"\nif is_valid_password(password):",
+        "detail": "module_4.8",
+        "documentation": {}
+    },
+    {
+        "label": "password",
+        "kind": 5,
+        "importPath": "module_4.8",
+        "description": "module_4.8",
+        "peekOfCode": "password = \"Password123\"\nif is_valid_password(password):\n    print(\"The password is valid.\")\nelse:\n    print(\"The password is not valid.\")",
+        "detail": "module_4.8",
+        "documentation": {}
+    },
+    {
+        "label": "parse_folder",
+        "kind": 2,
+        "importPath": "module_4.9",
+        "description": "module_4.9",
+        "peekOfCode": "def parse_folder(path):\n    files = []\n    folders = []\n    for record in path.iterdir():\n        if record.is_file():\n            files.append(record.name)\n        elif record.is_dir():\n            folders.append(record.name)\n    return files, folders\npath = Path(\".\")  # Use \".\" to represent the current directory",
+        "detail": "module_4.9",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "module_4.9",
+        "description": "module_4.9",
+        "peekOfCode": "path = Path(\".\")  # Use \".\" to represent the current directory\nfiles, directories = parse_folder(path)\nprint(\"Files:\", files)\nprint(\"Directories:\", directories)",
+        "detail": "module_4.9",
+        "documentation": {}
+    },
+    {
+        "label": "replace_spam_words",
+        "kind": 2,
+        "importPath": "module_5.10_replace_spam_words",
+        "description": "module_5.10_replace_spam_words",
+        "peekOfCode": "def replace_spam_words(text, spam_words):\n    # # Create a case-insensitive regex pattern for all spam words\n    # pattern = re.compile(r'\\b(?:' + '|'.join(map(re.escape, spam_words)) + r')\\b', re.IGNORECASE)\n    # # Replace spam words with asterisks using a lambda function\n    # replaced_text = pattern.sub(lambda match: '*' * len(match.group()), text)\n    # return replaced_text\n    pattern = re.compile('|'.join(spam_words), re.IGNORECASE)\n    return pattern.sub(lambda match: '*' * len(match.group()), text)\n    return pattern.sub(replace_with_asterisks, text)\ndef replace_with_asterisks(match):",
+        "detail": "module_5.10_replace_spam_words",
+        "documentation": {}
+    },
+    {
+        "label": "replace_with_asterisks",
+        "kind": 2,
+        "importPath": "module_5.10_replace_spam_words",
+        "description": "module_5.10_replace_spam_words",
+        "peekOfCode": "def replace_with_asterisks(match):\n    return '*' * len(match.group())\n# Test case\nmessage = \"This is a bad example, don't use bad words!\"\n# List of prohibited words\nstop_words = [\"bad\", \"example\"]\nresult = replace_spam_words(message, stop_words)\nprint(result)",
+        "detail": "module_5.10_replace_spam_words",
+        "documentation": {}
+    },
+    {
+        "label": "message",
+        "kind": 5,
+        "importPath": "module_5.10_replace_spam_words",
+        "description": "module_5.10_replace_spam_words",
+        "peekOfCode": "message = \"This is a bad example, don't use bad words!\"\n# List of prohibited words\nstop_words = [\"bad\", \"example\"]\nresult = replace_spam_words(message, stop_words)\nprint(result)",
+        "detail": "module_5.10_replace_spam_words",
+        "documentation": {}
+    },
+    {
+        "label": "stop_words",
+        "kind": 5,
+        "importPath": "module_5.10_replace_spam_words",
+        "description": "module_5.10_replace_spam_words",
+        "peekOfCode": "stop_words = [\"bad\", \"example\"]\nresult = replace_spam_words(message, stop_words)\nprint(result)",
+        "detail": "module_5.10_replace_spam_words",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "module_5.10_replace_spam_words",
+        "description": "module_5.10_replace_spam_words",
+        "peekOfCode": "result = replace_spam_words(message, stop_words)\nprint(result)",
+        "detail": "module_5.10_replace_spam_words",
+        "documentation": {}
+    },
+    {
+        "label": "real_len",
+        "kind": 2,
+        "importPath": "module_5.1_real_len",
+        "description": "module_5.1_real_len",
+        "peekOfCode": "def real_len(text):\n    chars = {'\\n', '\\f', '\\r', '\\t', '\\v'}\n    length = 0\n    for char in input_str:\n        if char not in chars:\n            length += 1\n    return length",
+        "detail": "module_5.1_real_len",
+        "documentation": {}
+    },
+    {
+        "label": "sanitize_phone_number",
+        "kind": 2,
+        "importPath": "module_5.2_sanitize_phone",
+        "description": "module_5.2_sanitize_phone",
+        "peekOfCode": "def sanitize_phone_number(phone):\n    return re.sub(r'\\D', '', phone)",
+        "detail": "module_5.2_sanitize_phone",
+        "documentation": {}
+    },
+    {
+        "label": "is_check_name",
+        "kind": 2,
+        "importPath": "module_5.3_check_name",
+        "description": "module_5.3_check_name",
+        "peekOfCode": "def is_check_name(fullname, first_name):\n    return fullname.startswith(first_name)\nprint(is_check_name('Kateryna Kornysheva','Kateryna'))",
+        "detail": "module_5.3_check_name",
+        "documentation": {}
+    },
+    {
+        "label": "sanitize_phone_number",
+        "kind": 2,
+        "importPath": "module_5.4_validate_mobile copy",
+        "description": "module_5.4_validate_mobile copy",
+        "peekOfCode": "def sanitize_phone_number(phone):\n    return re.sub(r'[+\\-\\(\\) ]', '', phone)\n    # new_phone = (\n    #     phone.strip()\n    #     .removeprefix(\"+\")\n    #     .replace(\"(\", \"\")\n    #     .replace(\")\", \"\")\n    #     .replace(\"-\", \"\")\n    #     .replace(\" \", \"\")\n    # )",
+        "detail": "module_5.4_validate_mobile copy",
+        "documentation": {}
+    },
+    {
+        "label": "get_country_from_prefix",
+        "kind": 2,
+        "importPath": "module_5.4_validate_mobile copy",
+        "description": "module_5.4_validate_mobile copy",
+        "peekOfCode": "def get_country_from_prefix(prefix):\n    country_prefixes = {\n        \"81\": \"JP\",\n        \"65\": \"SG\",\n        \"886\": \"TW\",\n        \"380\": \"UA\",   \n        }\n    for country_prefix, country_code in country_prefixes.items():\n        if prefix.startswith(country_prefix):\n            return country_code",
+        "detail": "module_5.4_validate_mobile copy",
+        "documentation": {}
+    },
+    {
+        "label": "get_phone_numbers_for_countries",
+        "kind": 2,
+        "importPath": "module_5.4_validate_mobile copy",
+        "description": "module_5.4_validate_mobile copy",
+        "peekOfCode": "def get_phone_numbers_for_countries(list_phones):\n    phone_by_country = {\n        \"UA\": [],\n        \"JP\": [],\n        \"TW\": [],\n        \"SG\": []\n    }\n    for phone in list_phones:\n        sanitized_number = sanitize_phone_number(phone)\n        country = get_country_from_prefix(sanitized_number)",
+        "detail": "module_5.4_validate_mobile copy",
+        "documentation": {}
+    },
+    {
+        "label": "phone_numbers_list",
+        "kind": 5,
+        "importPath": "module_5.4_validate_mobile copy",
+        "description": "module_5.4_validate_mobile copy",
+        "peekOfCode": "phone_numbers_list = [\"+818012345678\", \"+659876543210\", \"+886987654321\", \"+380987654321\", \"+123456789\"]\nresult = get_phone_numbers_for_countries(phone_numbers_list)\nprint(result)",
+        "detail": "module_5.4_validate_mobile copy",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "module_5.4_validate_mobile copy",
+        "description": "module_5.4_validate_mobile copy",
+        "peekOfCode": "result = get_phone_numbers_for_countries(phone_numbers_list)\nprint(result)",
+        "detail": "module_5.4_validate_mobile copy",
+        "documentation": {}
+    },
+    {
+        "label": "translate",
+        "kind": 2,
+        "importPath": "module_5.5_translate",
+        "description": "module_5.5_translate",
+        "peekOfCode": "def translate(name):\n    return name.translate(TRANS)\n# Test cases\n# print(TRANS)\nprint(translate(\"lмитро Короб\"))  # Output: Dmitro Korob\nprint(translate(\"Олекса Івасюк\"))  # Output: Oleksa Ivasyuk",
+        "detail": "module_5.5_translate",
+        "documentation": {}
+    },
+    {
+        "label": "CYRILLIC_SYMBOLS",
+        "kind": 5,
+        "importPath": "module_5.5_translate",
+        "description": "module_5.5_translate",
+        "peekOfCode": "CYRILLIC_SYMBOLS = \"абвгдеёжзийклмнопрстуфхцчшщъыьэюяєіїґ\"\nTRANSLATION = (\"a\", \"b\", \"v\", \"g\", \"d\", \"e\", \"e\", \"j\", \"z\", \"i\", \"j\", \"k\", \"l\", \"m\", \"n\", \"o\", \"p\", \"r\", \"s\", \"t\", \"u\",\n               \"f\", \"h\", \"ts\", \"ch\", \"sh\", \"sch\", \"\", \"y\", \"\", \"e\", \"yu\", \"ya\", \"je\", \"i\", \"ji\", \"g\")\nTRANS = {}\n# TRANS = list(zip(CYRILLIC_SYMBOLS, TRANSLATION))\nfor c, l in zip(CYRILLIC_SYMBOLS, TRANSLATION):\n    TRANS[ord(c)] = l\n    TRANS[ord(c.upper())] = l.upper()\ndef translate(name):\n    return name.translate(TRANS)",
+        "detail": "module_5.5_translate",
+        "documentation": {}
+    },
+    {
+        "label": "TRANSLATION",
+        "kind": 5,
+        "importPath": "module_5.5_translate",
+        "description": "module_5.5_translate",
+        "peekOfCode": "TRANSLATION = (\"a\", \"b\", \"v\", \"g\", \"d\", \"e\", \"e\", \"j\", \"z\", \"i\", \"j\", \"k\", \"l\", \"m\", \"n\", \"o\", \"p\", \"r\", \"s\", \"t\", \"u\",\n               \"f\", \"h\", \"ts\", \"ch\", \"sh\", \"sch\", \"\", \"y\", \"\", \"e\", \"yu\", \"ya\", \"je\", \"i\", \"ji\", \"g\")\nTRANS = {}\n# TRANS = list(zip(CYRILLIC_SYMBOLS, TRANSLATION))\nfor c, l in zip(CYRILLIC_SYMBOLS, TRANSLATION):\n    TRANS[ord(c)] = l\n    TRANS[ord(c.upper())] = l.upper()\ndef translate(name):\n    return name.translate(TRANS)\n# Test cases",
+        "detail": "module_5.5_translate",
+        "documentation": {}
+    },
+    {
+        "label": "TRANS",
+        "kind": 5,
+        "importPath": "module_5.5_translate",
+        "description": "module_5.5_translate",
+        "peekOfCode": "TRANS = {}\n# TRANS = list(zip(CYRILLIC_SYMBOLS, TRANSLATION))\nfor c, l in zip(CYRILLIC_SYMBOLS, TRANSLATION):\n    TRANS[ord(c)] = l\n    TRANS[ord(c.upper())] = l.upper()\ndef translate(name):\n    return name.translate(TRANS)\n# Test cases\n# print(TRANS)\nprint(translate(\"lмитро Короб\"))  # Output: Dmitro Korob",
+        "detail": "module_5.5_translate",
+        "documentation": {}
+    },
+    {
+        "label": "formatted_grades",
+        "kind": 2,
+        "importPath": "module_5.6_formater_grades",
+        "description": "module_5.6_formater_grades",
+        "peekOfCode": "def formatted_grades(students):\n    result = []\n    for i, (name, grade) in enumerate(students.items(), start=1):\n        row = f\"{i:>{4}}{'|':<1}{name:<10}{'|':<1}{grade:^5}{'|':<1}{grades.get(grade):^5}\"\n        result.append(row)\n    return result\nstudents = {\"Nick\": \"A\", \"Olga\": \"B\", \"Mike\": \"FX\", \"Anna\": \"C\"}\nfor el in formatted_grades(students):\n    print(el)",
+        "detail": "module_5.6_formater_grades",
+        "documentation": {}
+    },
+    {
+        "label": "students",
+        "kind": 5,
+        "importPath": "module_5.6_formater_grades",
+        "description": "module_5.6_formater_grades",
+        "peekOfCode": "students = {\"Nick\": \"A\", \"Olga\": \"B\", \"Mike\": \"FX\", \"Anna\": \"C\"}\nІ повертає список відформатованих рядків, щоб під час виведення наступного коду:\nfor el in formatted_grades(students):\n    print(el)\nВиходила наступна таблиця:\n   1|Nick      |  A  |  5\n   2|Olga      |  B  |  5\n   3|Mike      | FX  |  2\n   4|Anna      |  C  |  4\nперший стовпець — ширина 4 символи, вирівнювання по правому краю",
+        "detail": "module_5.6_formater_grades",
+        "documentation": {}
+    },
+    {
+        "label": "grades",
+        "kind": 5,
+        "importPath": "module_5.6_formater_grades",
+        "description": "module_5.6_formater_grades",
+        "peekOfCode": "grades = {\"A\": 5, \"B\": 5, \"C\": 4, \"D\": 3, \"E\": 3, \"FX\": 2, \"F\": 1}\ndef formatted_grades(students):\n    result = []\n    for i, (name, grade) in enumerate(students.items(), start=1):\n        row = f\"{i:>{4}}{'|':<1}{name:<10}{'|':<1}{grade:^5}{'|':<1}{grades.get(grade):^5}\"\n        result.append(row)\n    return result\nstudents = {\"Nick\": \"A\", \"Olga\": \"B\", \"Mike\": \"FX\", \"Anna\": \"C\"}\nfor el in formatted_grades(students):\n    print(el)",
+        "detail": "module_5.6_formater_grades",
+        "documentation": {}
+    },
+    {
+        "label": "students",
+        "kind": 5,
+        "importPath": "module_5.6_formater_grades",
+        "description": "module_5.6_formater_grades",
+        "peekOfCode": "students = {\"Nick\": \"A\", \"Olga\": \"B\", \"Mike\": \"FX\", \"Anna\": \"C\"}\nfor el in formatted_grades(students):\n    print(el)",
+        "detail": "module_5.6_formater_grades",
+        "documentation": {}
+    },
+    {
+        "label": "formatted_numbers",
+        "kind": 2,
+        "importPath": "module_5.7_formater_numbers",
+        "description": "module_5.7_formater_numbers",
+        "peekOfCode": "def formatted_numbers():\n    output = []\n    header = f\"|{'decimal':^10}{'|':<1}{'hex':^10}{'|':<1}{'binary':^10}|\"\n    output.append(header)\n    for i in range(16):\n        decimal = f\"{i:<10}\"\n        hex_num = f\"{hex(i)[2:]:^10}\"\n        binary = f\"{bin(i)[2:]:>10}\"\n        row = f\"|{decimal}|{hex_num}|{binary}|\"\n        output.append(row)",
+        "detail": "module_5.7_formater_numbers",
+        "documentation": {}
+    },
+    {
+        "label": "find_word",
+        "kind": 2,
+        "importPath": "module_5.8_find_words",
+        "description": "module_5.8_find_words",
+        "peekOfCode": "def find_word(text, word):\n    result_dict = {\n        'result': False,\n        'first_index': None,\n        'last_index': None,\n        'search_string': word,\n        'string': text\n    }\n    pattern = re.compile(re.escape(word))\n    match = pattern.search(text)",
+        "detail": "module_5.8_find_words",
+        "documentation": {}
+    },
+    {
+        "label": "find_all_words",
+        "kind": 2,
+        "importPath": "module_5.8_find_words",
+        "description": "module_5.8_find_words",
+        "peekOfCode": "def find_all_words(text, word):\n    occurrences = re.findall(re.escape(word), text, re.IGNORECASE)\n    return occurrences\nresult1 = find_word(\"on Python\", \"Python\")\nprint(result1)",
+        "detail": "module_5.8_find_words",
+        "documentation": {}
+    },
+    {
+        "label": "result1",
+        "kind": 5,
+        "importPath": "module_5.8_find_words",
+        "description": "module_5.8_find_words",
+        "peekOfCode": "result1 = find_word(\"on Python\", \"Python\")\nprint(result1)",
+        "detail": "module_5.8_find_words",
+        "documentation": {}
+    },
+    {
+        "label": "find_all_words",
+        "kind": 2,
+        "importPath": "module_5.9_find_all_words",
+        "description": "module_5.9_find_all_words",
+        "peekOfCode": "def find_all_words(text, word):\n     return re.findall(re.escape(word), text, re.IGNORECASE)\ntext = \"PyThOn is a powerful programming language. python is widely used for various purposes.\"\nword_to_find = \"Python\"\nresult = find_all_words(text, word_to_find)\nprint(result)",
+        "detail": "module_5.9_find_all_words",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "kind": 5,
+        "importPath": "module_5.9_find_all_words",
+        "description": "module_5.9_find_all_words",
+        "peekOfCode": "text = \"PyThOn is a powerful programming language. python is widely used for various purposes.\"\nword_to_find = \"Python\"\nresult = find_all_words(text, word_to_find)\nprint(result)",
+        "detail": "module_5.9_find_all_words",
+        "documentation": {}
+    },
+    {
+        "label": "word_to_find",
+        "kind": 5,
+        "importPath": "module_5.9_find_all_words",
+        "description": "module_5.9_find_all_words",
+        "peekOfCode": "word_to_find = \"Python\"\nresult = find_all_words(text, word_to_find)\nprint(result)",
+        "detail": "module_5.9_find_all_words",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "module_5.9_find_all_words",
+        "description": "module_5.9_find_all_words",
+        "peekOfCode": "result = find_all_words(text, word_to_find)\nprint(result)",
+        "detail": "module_5.9_find_all_words",
+        "documentation": {}
+    },
+    {
+        "label": "width",
+        "kind": 5,
+        "importPath": "module_5.module5",
+        "description": "module_5.module5",
+        "peekOfCode": "width = 5\nfor num in range(12):\n    print('{:^10} {:^10} {:^10}'.format(num, num**2, num**3))\ns = \"{name} {last_name}\".format(last_name=\"Dilan\", name=\"Bob\")\nprint(s)   # Bob Dilan\ns =  \"{name!r} {last_name!s}\".format(last_name=\"Dilan\", name=\"Bob\")\nprint(s)  # 'Bob' Dilan",
+        "detail": "module_5.module5",
+        "documentation": {}
+    },
+    {
+        "label": "s",
+        "kind": 5,
+        "importPath": "module_5.module5",
+        "description": "module_5.module5",
+        "peekOfCode": "s = \"{name} {last_name}\".format(last_name=\"Dilan\", name=\"Bob\")\nprint(s)   # Bob Dilan\ns =  \"{name!r} {last_name!s}\".format(last_name=\"Dilan\", name=\"Bob\")\nprint(s)  # 'Bob' Dilan",
+        "detail": "module_5.module5",
+        "documentation": {}
+    },
+    {
+        "label": "s",
+        "kind": 5,
+        "importPath": "module_5.module5",
+        "description": "module_5.module5",
+        "peekOfCode": "s =  \"{name!r} {last_name!s}\".format(last_name=\"Dilan\", name=\"Bob\")\nprint(s)  # 'Bob' Dilan",
+        "detail": "module_5.module5",
+        "documentation": {}
+    },
+    {
+        "label": "get_cats_info",
+        "kind": 2,
+        "importPath": "module_6.4",
+        "description": "module_6.4",
+        "peekOfCode": "def get_cats_info(path):\n    cats_list = []\n    with open(path, \"r\") as file:\n        for line in file:\n            parts = line.strip().split(',')\n            cat_info = {\n                \"id\": parts[0],\n                \"name\": parts[1],\n                \"age\": parts[2]\n            }",
+        "detail": "module_6.4",
+        "documentation": {}
+    },
+    {
+        "label": "sanitize_file",
+        "kind": 2,
+        "importPath": "module_6.5",
+        "description": "module_6.5",
+        "peekOfCode": "def sanitize_file(source, output):\n     with open(source, \"r\") as file:\n         source_content = file.read()\n     prepared_content = ''.join(char for char in source_content if not char.isdigit())\n     with open(output, \"w\") as output:\n        output.write(prepared_content)",
+        "detail": "module_6.5",
+        "documentation": {}
+    },
+    {
+        "label": "save_credentials_users",
+        "kind": 2,
+        "importPath": "module_6.8",
+        "description": "module_6.8",
+        "peekOfCode": "def save_credentials_users(path, users_info):\n    with open(path, 'wb') as file:\n        for username, password in users_info.items():\n            line = f\"{username}:{password}\\n\"\n            file.write(line.encode())\n# Example usage:\nusers_info = {'andy': 'uyro18890D', 'steve': 'oppjM13LL9e'}\nsave_credentials_users('user_credentials.dat', users_info)",
+        "detail": "module_6.8",
+        "documentation": {}
+    },
+    {
+        "label": "users_info",
+        "kind": 5,
+        "importPath": "module_6.8",
+        "description": "module_6.8",
+        "peekOfCode": "users_info = {'andy': 'uyro18890D', 'steve': 'oppjM13LL9e'}\nsave_credentials_users('user_credentials.dat', users_info)",
+        "detail": "module_6.8",
+        "documentation": {}
+    },
+    {
+        "label": "get_credentials_users",
+        "kind": 2,
+        "importPath": "module_6.9",
+        "description": "module_6.9",
+        "peekOfCode": "def get_credentials_users(path):\n    credentials_list = []\n    with open(path, 'rb') as file:\n        for line in file:\n            credentials_list.append(line.decode().strip())\n    return credentials_list\n# Example usage:\nfile_path = 'user_credentials.dat'\nresult = get_credentials_users(file_path)\nprint(result)",
+        "detail": "module_6.9",
+        "documentation": {}
+    },
+    {
+        "label": "file_path",
+        "kind": 5,
+        "importPath": "module_6.9",
+        "description": "module_6.9",
+        "peekOfCode": "file_path = 'user_credentials.dat'\nresult = get_credentials_users(file_path)\nprint(result)",
+        "detail": "module_6.9",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "module_6.9",
+        "description": "module_6.9",
+        "peekOfCode": "result = get_credentials_users(file_path)\nprint(result)",
+        "detail": "module_6.9",
+        "documentation": {}
+    },
+    {
+        "label": "create_backup",
+        "kind": 2,
+        "importPath": "module_6.archive",
+        "description": "module_6.archive",
+        "peekOfCode": "def create_backup(path, file_name, employee_residence):\n    # Step 1: Save the employee_residence dictionary to a binary file\n    with open(f\"{path}/{file_name}\", 'wb') as file:\n        for username, residence in employee_residence.items():\n            line = f\"{username} {residence}\\n\"\n            file.write(line.encode())\n    # Step 2: Archive the folder at the specified path\n    archive_path = shutil.make_archive(f\"{path}/backup_folder\", 'zip', path)\n    return archive_path\n# Example usage:",
+        "detail": "module_6.archive",
+        "documentation": {}
+    },
+    {
+        "label": "employee_residence",
+        "kind": 5,
+        "importPath": "module_6.archive",
+        "description": "module_6.archive",
+        "peekOfCode": "employee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nresult = create_backup('./', 'employee_data.dat', employee_residence)\nprint(result)",
+        "detail": "module_6.archive",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "module_6.archive",
+        "description": "module_6.archive",
+        "peekOfCode": "result = create_backup('./', 'employee_data.dat', employee_residence)\nprint(result)",
+        "detail": "module_6.archive",
+        "documentation": {}
+    },
+    {
+        "label": "is_equal_string",
+        "kind": 2,
+        "importPath": "module_6.encoding",
+        "description": "module_6.encoding",
+        "peekOfCode": "def is_equal_string(utf8_string, utf16_string):\n    try:\n        # Decode utf8_string and utf16_string to Unicode strings\n        unicode_utf8 = utf8_string.decode('utf-8')\n        unicode_utf16 = utf16_string.decode('utf-16')\n        # Compare the Unicode strings\n        return unicode_utf8 == unicode_utf16\n    except UnicodeDecodeError:\n        # Handle decoding errors (e.g., invalid encoding)\n        return False",
+        "detail": "module_6.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "utf8_str",
+        "kind": 5,
+        "importPath": "module_6.encoding",
+        "description": "module_6.encoding",
+        "peekOfCode": "utf8_str = b'This is a utf-8 string'\nutf16_str = b'\\xff\\xfeT\\x00h\\x00i\\x00s\\x00 \\x00i\\x00s\\x00 \\x00a\\x00 \\x00u\\x00t\\x00f\\x00-\\x008\\x00 \\x00s\\x00t\\x00r\\x00i\\x00n\\x00g\\x00\\x00\\x00'\nresult = is_equal_string(utf8_str, utf16_str)\nprint(result)",
+        "detail": "module_6.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "utf16_str",
+        "kind": 5,
+        "importPath": "module_6.encoding",
+        "description": "module_6.encoding",
+        "peekOfCode": "utf16_str = b'\\xff\\xfeT\\x00h\\x00i\\x00s\\x00 \\x00i\\x00s\\x00 \\x00a\\x00 \\x00u\\x00t\\x00f\\x00-\\x008\\x00 \\x00s\\x00t\\x00r\\x00i\\x00n\\x00g\\x00\\x00\\x00'\nresult = is_equal_string(utf8_str, utf16_str)\nprint(result)",
+        "detail": "module_6.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "module_6.encoding",
+        "description": "module_6.encoding",
+        "peekOfCode": "result = is_equal_string(utf8_str, utf16_str)\nprint(result)",
+        "detail": "module_6.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "save_applicant_data",
+        "kind": 2,
+        "importPath": "module_6.files",
+        "description": "module_6.files",
+        "peekOfCode": "def save_applicant_data(source, output):\n    with open(output, \"w\") as output:\n        for application in source:\n            prepared_content = f\"{application['name']},{application['specialty']},{application['math']},{application['lang']},{application['eng']}\\n\"\n            output.write(prepared_content)  \ndef save_applicant_data(source, output):\n    # Open the output file in \"w\" mode using a with statement\n    with open(output, \"w\") as output_file:\n        # Iterate through each applicant in the source list\n        for applicant in source:",
+        "detail": "module_6.files",
+        "documentation": {}
+    },
+    {
+        "label": "save_applicant_data",
+        "kind": 2,
+        "importPath": "module_6.files",
+        "description": "module_6.files",
+        "peekOfCode": "def save_applicant_data(source, output):\n    # Open the output file in \"w\" mode using a with statement\n    with open(output, \"w\") as output_file:\n        # Iterate through each applicant in the source list\n        for applicant in source:\n            # Create a formatted string with applicant's data\n            applicant_data = f\"{applicant['name']},{applicant['specialty']},{applicant['math']},{applicant['lang']},{applicant['eng']}\\n\"\n            # Write the formatted string to the output file\n            output_file.write(applicant_data)\nsource = [",
+        "detail": "module_6.files",
+        "documentation": {}
+    },
+    {
+        "label": "source",
+        "kind": 5,
+        "importPath": "module_6.files",
+        "description": "module_6.files",
+        "peekOfCode": "source = [\n    {\n        \"name\": \"Kovalchuk Oleksiy\",\n        \"specialty\": 301,\n        \"math\": 175,\n        \"lang\": 180,\n        \"eng\": 155,\n    },\n    {\n        \"name\": \"Ivanchuk Boryslav\",",
+        "detail": "module_6.files",
+        "documentation": {}
+    },
+    {
+        "label": "unpack",
+        "kind": 2,
+        "importPath": "module_6.unpack_archive",
+        "description": "module_6.unpack_archive",
+        "peekOfCode": "def unpack(archive_path, path_to_unpack):\n    shutil.unpack_archive(archive_path, path_to_unpack)\n# Example usage:\narchive_path = './backup_folder.zip'\npath_to_unpack = './'\nunpack(archive_path, path_to_unpack)",
+        "detail": "module_6.unpack_archive",
+        "documentation": {}
+    },
+    {
+        "label": "archive_path",
+        "kind": 5,
+        "importPath": "module_6.unpack_archive",
+        "description": "module_6.unpack_archive",
+        "peekOfCode": "archive_path = './backup_folder.zip'\npath_to_unpack = './'\nunpack(archive_path, path_to_unpack)",
+        "detail": "module_6.unpack_archive",
+        "documentation": {}
+    },
+    {
+        "label": "path_to_unpack",
+        "kind": 5,
+        "importPath": "module_6.unpack_archive",
+        "description": "module_6.unpack_archive",
+        "peekOfCode": "path_to_unpack = './'\nunpack(archive_path, path_to_unpack)",
+        "detail": "module_6.unpack_archive",
+        "documentation": {}
+    },
+    {
+        "label": "do_setup",
+        "kind": 2,
+        "importPath": "module_7.1 copy",
+        "description": "module_7.1 copy",
+        "peekOfCode": "def do_setup(args_dict, requires):\n    setup(name=args_dict.get('name'),\n      version=args_dict.get('version'),\n      description=args_dict.get('description'),\n      url=args_dict.get('url'),\n      author=args_dict.get('author'),\n      author_email=args_dict.get('author_email'),\n      license=args_dict.get('license'),\n      packages=args_dict.get('packages'),\n      install_requires=requires",
+        "detail": "module_7.1 copy",
+        "documentation": {}
+    },
+    {
+        "label": "do_setup",
+        "kind": 2,
+        "importPath": "module_7.1",
+        "description": "module_7.1",
+        "peekOfCode": "def do_setup(args_dict):\n    setup(name=args_dict.get('name'),\n      version=args_dict.get('version'),\n      description=args_dict.get('description'),\n      url=args_dict.get('url'),\n      author=args_dict.get('author'),\n      author_email=args_dict.get('author_email'),\n      license=args_dict.get('license'),\n      packages=args_dict.get('packages'),\n      )",
+        "detail": "module_7.1",
+        "documentation": {}
+    },
+    {
+        "label": "do_setup",
+        "kind": 2,
+        "importPath": "module_7.3",
+        "description": "module_7.3",
+        "peekOfCode": "def do_setup(args_dict, requires, entry_points):\n    setup(name=args_dict['name'],\n          version=args_dict['version'],\n          description=args_dict['description'],\n          url=args_dict['url'],\n          author=args_dict['author'],\n          author_email=args_dict['author_email'],\n          license=args_dict['license'],\n          packages=args_dict['packages'],\n          install_requires=requires,",
+        "detail": "module_7.3",
+        "documentation": {}
+    },
+    {
+        "label": "data_preparation",
+        "kind": 2,
+        "importPath": "module_7.4",
+        "description": "module_7.4",
+        "peekOfCode": "def data_preparation(list_data):\n    new_list = []\n    for element in list_data:\n        if (len(element) > 2):\n            new_list += sorted(element)[1:-1]\n        else:\n            new_list += element\n    return sorted(new_list, reverse=True)\nprint(data_preparation(([1, 2,], [3], [5, 6, 2])))",
+        "detail": "module_7.4",
+        "documentation": {}
+    },
+    {
+        "label": "all_sub_lists",
+        "kind": 2,
+        "importPath": "module_7.5",
+        "description": "module_7.5",
+        "peekOfCode": "def all_sub_lists(data):\n    sub_lists = [[]]\n    if (len(data) == 0):\n        return sub_lists\n    for j in range(1, len(data)):\n        for i in range(len(data) - j + 1):\n            sub_lists.append(data[i:(j+i)])\n    sub_lists.append(data)\n    return sub_lists\nlist = [4, 6, 1, 3]",
+        "detail": "module_7.5",
+        "documentation": {}
+    },
+    {
+        "label": "list",
+        "kind": 5,
+        "importPath": "module_7.5",
+        "description": "module_7.5",
+        "peekOfCode": "list = [4, 6, 1, 3]\nprint(all_sub_lists(list))\n# print(list[0:1])\n# print(list[1:2])\n# print(list[2:3])\n# print(list[3:4])\n# print(list[0:2])\n# print(list[1:3])\n# print(list[2:4])\n# print(list[0:3])",
+        "detail": "module_7.5",
+        "documentation": {}
+    },
+    {
+        "label": "make_request",
+        "kind": 2,
+        "importPath": "module_7.6",
+        "description": "module_7.6",
+        "peekOfCode": "def make_request(keys, values):\n    empty_dict = {}\n    if len(keys) != len(values):\n        return empty_dict\n    for key, value in zip(keys, values):\n        empty_dict[key] = value \n    return empty_dict\nprint(make_request([11,22,33], [4,6,7]))",
+        "detail": "module_7.6",
+        "documentation": {}
+    },
+    {
+        "label": "file_operations",
+        "kind": 2,
+        "importPath": "module_7.7_file_operations copy",
+        "description": "module_7.7_file_operations copy",
+        "peekOfCode": "def file_operations(path, additional_info, start_pos, count_chars):\n     with open(path, \"a\") as file:\n         file.write(additional_info)\n     with open(path, \"r\") as file:\n         file.seek(start_pos)\n         return file.read(count_chars)",
+        "detail": "module_7.7_file_operations copy",
+        "documentation": {}
+    },
+    {
+        "label": "get_employees_by_profession",
+        "kind": 2,
+        "importPath": "module_7.8_file_search copy",
+        "description": "module_7.8_file_search copy",
+        "peekOfCode": "def get_employees_by_profession(path, profession):\n    result = []\n    with open(path, \"r\") as file:\n        for line in file.readlines():\n           if line.find(profession) != -1:\n                result.append(line.strip())\n    joined_result = ''.join(result)\n    return joined_result.replace(profession, '').strip()\npath = 'module_7/employee.txt'\nprofession = 'cook'",
+        "detail": "module_7.8_file_search copy",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "module_7.8_file_search copy",
+        "description": "module_7.8_file_search copy",
+        "peekOfCode": "path = 'module_7/employee.txt'\nprofession = 'cook'\nresult_string = get_employees_by_profession(path, profession)\nprint(result_string)",
+        "detail": "module_7.8_file_search copy",
+        "documentation": {}
+    },
+    {
+        "label": "profession",
+        "kind": 5,
+        "importPath": "module_7.8_file_search copy",
+        "description": "module_7.8_file_search copy",
+        "peekOfCode": "profession = 'cook'\nresult_string = get_employees_by_profession(path, profession)\nprint(result_string)",
+        "detail": "module_7.8_file_search copy",
+        "documentation": {}
+    },
+    {
+        "label": "result_string",
+        "kind": 5,
+        "importPath": "module_7.8_file_search copy",
+        "description": "module_7.8_file_search copy",
+        "peekOfCode": "result_string = get_employees_by_profession(path, profession)\nprint(result_string)",
+        "detail": "module_7.8_file_search copy",
+        "documentation": {}
+    },
+    {
+        "label": "to_indexed",
+        "kind": 2,
+        "importPath": "module_7.9",
+        "description": "module_7.9",
+        "peekOfCode": "def to_indexed(source_file, output_file):\n     with open(source_file, 'r') as f_in, open(output_file, 'w') as f_out:\n        for index, line in enumerate(f_in):\n            indexed_line = f\"{index}: {line}\" \n            f_out.write(indexed_line) \n# Приклад використання\nsource_file = 'module_7/input.txt'\noutput_file = 'module_7/output.txt'\nto_indexed(source_file, output_file)",
+        "detail": "module_7.9",
+        "documentation": {}
+    },
+    {
+        "label": "source_file",
+        "kind": 5,
+        "importPath": "module_7.9",
+        "description": "module_7.9",
+        "peekOfCode": "source_file = 'module_7/input.txt'\noutput_file = 'module_7/output.txt'\nto_indexed(source_file, output_file)",
+        "detail": "module_7.9",
+        "documentation": {}
+    },
+    {
+        "label": "output_file",
+        "kind": 5,
+        "importPath": "module_7.9",
+        "description": "module_7.9",
+        "peekOfCode": "output_file = 'module_7/output.txt'\nto_indexed(source_file, output_file)",
+        "detail": "module_7.9",
+        "documentation": {}
+    },
+    {
+        "label": "get_days_from_today",
+        "kind": 2,
+        "importPath": "module_8.1_get_days_from_today",
+        "description": "module_8.1_get_days_from_today",
+        "peekOfCode": "def get_days_from_today(date):\n    date_list = date.split('-')\n    print(date_list)\n    date_time = datetime(year=int(date_list[0]), month=int(date_list[1]), day=int(date_list[2]))\n    return (datetime.now()- date_time).days\nprint(get_days_from_today(\"2021-10-09\"))",
+        "detail": "module_8.1_get_days_from_today",
+        "documentation": {}
+    },
+    {
+        "label": "get_days_in_month",
+        "kind": 2,
+        "importPath": "module_8.2_get_days_in_month",
+        "description": "module_8.2_get_days_in_month",
+        "peekOfCode": "def get_days_in_month(month, year):\n    next_month = 1 if month == 12 else month + 1\n    next_year = year + 1 if month == 12 else year\n    last_day_of_month = date(next_year, next_month, 1) - date(year, month, 1)\n    return last_day_of_month.days\nprint(get_days_in_month(12, 2024))",
+        "detail": "module_8.2_get_days_in_month",
+        "documentation": {}
+    },
+    {
+        "label": "get_str_date",
+        "kind": 2,
+        "importPath": "module_8.3_get_str_date",
+        "description": "module_8.3_get_str_date",
+        "peekOfCode": "def get_str_date(date):\n    result = datetime.fromisoformat(date[:-1])\n    return result.strftime(\"%A %d %B %Y\")\nprint(get_str_date('2021-05-27 17:08:34.149Z'))",
+        "detail": "module_8.3_get_str_date",
+        "documentation": {}
+    },
+    {
+        "label": "get_random_winners",
+        "kind": 2,
+        "importPath": "module_8.4_get_random_winners",
+        "description": "module_8.4_get_random_winners",
+        "peekOfCode": "def get_random_winners(quantity, participants):\n    result =[]\n    if quantity > len(participants):\n        return result\n    keys = list(participants.keys())\n    random.shuffle(keys)\n    return random.sample(keys, k=2)\nparticipants = {\n    \"603d2cec9993c627f0982404\": \"test@test.com\",\n    \"603f79022922882d30dd7bb6\": \"test11@test.com\",",
+        "detail": "module_8.4_get_random_winners",
+        "documentation": {}
+    },
+    {
+        "label": "participants",
+        "kind": 5,
+        "importPath": "module_8.4_get_random_winners",
+        "description": "module_8.4_get_random_winners",
+        "peekOfCode": "participants = {\n    \"603d2cec9993c627f0982404\": \"test@test.com\",\n    \"603f79022922882d30dd7bb6\": \"test11@test.com\",\n    \"60577ce4b536f8259cc225d2\": \"test2@test.com\",\n    \"605884760742316c07eae603\": \"vitanlhouse@gmail.com\",\n    \"605b89080c318d66862db390\": \"elhe2013@gmail.com\",\n}\nprint(get_random_winners(2, participants))",
+        "detail": "module_8.4_get_random_winners",
+        "documentation": {}
+    },
+    {
+        "label": "decimal_average",
+        "kind": 2,
+        "importPath": "module_8.5_decimal_average",
+        "description": "module_8.5_decimal_average",
+        "peekOfCode": "def decimal_average(number_list, signs_count):\n    getcontext().prec = signs_count\n    decimal_numbers = [Decimal(str(num)) for num in number_list]\n    return sum(decimal_numbers) / len(number_list)\nprint(decimal_average([3, 5, 77, 23, 0.57], 6))\nprint(decimal_average([31, 55, 177, 2300, 1.57], 9))",
+        "detail": "module_8.5_decimal_average",
+        "documentation": {}
+    },
+    {
+        "label": "convert_list",
+        "kind": 2,
+        "importPath": "module_8.6_convert_list",
+        "description": "module_8.6_convert_list",
+        "peekOfCode": "def convert_list(cats):\n    if isinstance(cats[0],Cat):\n        return [{\n            \"nickname\": cat.nickname,\n            \"age\": cat.age,\n            \"owner\": cat.owner\n            } for cat in cats]\n    return [Cat(cat.get('nickname'), cat.get('age'), cat.get('owner')) for cat in cats]\nprint(convert_list([Cat(\"Mick\", 5, \"Sara\"), Cat(\"Barsik\", 7, \"Olga\"), Cat(\"Simon\", 3, \"Yura\")]))\nprint(convert_list([",
+        "detail": "module_8.6_convert_list",
+        "documentation": {}
+    },
+    {
+        "label": "Cat",
+        "kind": 5,
+        "importPath": "module_8.6_convert_list",
+        "description": "module_8.6_convert_list",
+        "peekOfCode": "Cat = collections.namedtuple(\"Cat\", [\"nickname\", \"age\", \"owner\"])\ndef convert_list(cats):\n    if isinstance(cats[0],Cat):\n        return [{\n            \"nickname\": cat.nickname,\n            \"age\": cat.age,\n            \"owner\": cat.owner\n            } for cat in cats]\n    return [Cat(cat.get('nickname'), cat.get('age'), cat.get('owner')) for cat in cats]\nprint(convert_list([Cat(\"Mick\", 5, \"Sara\"), Cat(\"Barsik\", 7, \"Olga\"), Cat(\"Simon\", 3, \"Yura\")]))",
+        "detail": "module_8.6_convert_list",
+        "documentation": {}
+    },
+    {
+        "label": "get_count_visits_from_ip",
+        "kind": 2,
+        "importPath": "module_8.7",
+        "description": "module_8.7",
+        "peekOfCode": "def get_count_visits_from_ip(ips):\n    return Counter(ips)\ndef get_frequent_visit_from_ip(ips):\n    count_visits = get_count_visits_from_ip(ips)\n    return count_visits.most_common()[0]\nprint(get_frequent_visit_from_ip([\n    \"85.157.172.254\",\n    \"85.157.172.254\",\n    \"85.157.172.258\",\n    \"85.157.172.252\",",
+        "detail": "module_8.7",
+        "documentation": {}
+    },
+    {
+        "label": "get_frequent_visit_from_ip",
+        "kind": 2,
+        "importPath": "module_8.7",
+        "description": "module_8.7",
+        "peekOfCode": "def get_frequent_visit_from_ip(ips):\n    count_visits = get_count_visits_from_ip(ips)\n    return count_visits.most_common()[0]\nprint(get_frequent_visit_from_ip([\n    \"85.157.172.254\",\n    \"85.157.172.254\",\n    \"85.157.172.258\",\n    \"85.157.172.252\",\n    \"85.157.172.253\",\n    \"85.157.172.253\",",
+        "detail": "module_8.7",
+        "documentation": {}
+    },
+    {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "module_8.7",
+        "description": "module_8.7",
+        "peekOfCode": "IP = [\n    \"85.157.172.253\",\n    ...\n]\nРеалізуйте дві функції. Перша get_count_visits_from_ip за допомогою Counter повертатиме словник, де ключ це IP, а значення – кількість входжень у вказаний список.\nПриклад:\n{\n    '85.157.172.253': 2,\n    ...\n}",
+        "detail": "module_8.7",
+        "documentation": {}
+    }
+]
