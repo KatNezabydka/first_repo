@@ -1,5 +1,32 @@
 [
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -25,38 +52,45 @@
         "documentation": {}
     },
     {
+        "label": "collections",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "collections",
+        "description": "collections",
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "UserList",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "UserString",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
         "label": "re",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "re",
         "description": "re",
         "detail": "re",
-        "documentation": {}
-    },
-    {
-        "label": "pickle",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pickle",
-        "description": "pickle",
-        "detail": "pickle",
-        "documentation": {}
-    },
-    {
-        "label": "shutil",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "shutil",
-        "description": "shutil",
-        "detail": "shutil",
-        "documentation": {}
-    },
-    {
-        "label": "setup",
-        "importPath": "setuptools",
-        "description": "setuptools",
-        "isExtraImport": true,
-        "detail": "setuptools",
         "documentation": {}
     },
     {
@@ -125,20 +159,659 @@
         "documentation": {}
     },
     {
-        "label": "collections",
-        "kind": 6,
+        "label": "reduce",
+        "importPath": "functools",
+        "description": "functools",
         "isExtraImport": true,
-        "importPath": "collections",
-        "description": "collections",
-        "detail": "collections",
+        "detail": "functools",
         "documentation": {}
     },
     {
-        "label": "Counter",
-        "importPath": "collections",
-        "description": "collections",
-        "isExtraImport": true,
-        "detail": "collections",
+        "label": "create_backup",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "peekOfCode": "def create_backup(path, file_name, employee_residence):\n    with open(f\"{path}/{file_name}\", 'w', encoding='utf-8') as file:\n        for username, residence in employee_residence.items():\n            line = f\"{username},{residence}\\n\"\n            file.write(line)\n    folder_name = os.path.basename(path)  # Отримуємо ім'я теки\n    archive_path = shutil.make_archive(f\"{path}/{folder_name}/backup_folder\", 'zip', path)\n    return archive_path\n# Приклад використання:\nemployee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "employee_residence",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "peekOfCode": "employee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.txt'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))\n# Example usage:\nemployee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "file_name",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "peekOfCode": "file_name = 'employee_data.txt'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))\n# Example usage:\nemployee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "peekOfCode": "path = './module_6/'\nprint(create_backup(path, file_name, employee_residence))\n# Example usage:\nemployee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "employee_residence",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "peekOfCode": "employee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "file_name",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "peekOfCode": "file_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "peekOfCode": "path = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "unpack",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.11_unpack_archive",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.11_unpack_archive",
+        "peekOfCode": "def unpack(archive_path, path_to_unpack):\n    shutil.unpack_archive(archive_path, path_to_unpack)\narchive_path = './module_6/backup_folder.zip'\npath_to_unpack = './module_6/'\nunpack(archive_path, path_to_unpack)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.11_unpack_archive",
+        "documentation": {}
+    },
+    {
+        "label": "archive_path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.11_unpack_archive",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.11_unpack_archive",
+        "peekOfCode": "archive_path = './module_6/backup_folder.zip'\npath_to_unpack = './module_6/'\nunpack(archive_path, path_to_unpack)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.11_unpack_archive",
+        "documentation": {}
+    },
+    {
+        "label": "path_to_unpack",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.11_unpack_archive",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.11_unpack_archive",
+        "peekOfCode": "path_to_unpack = './module_6/'\nunpack(archive_path, path_to_unpack)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.11_unpack_archive",
+        "documentation": {}
+    },
+    {
+        "label": "write_employees_to_file",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.1_write_employees_to_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.1_write_employees_to_file",
+        "peekOfCode": "def write_employees_to_file(employee_list, path):\n    file = open(path, \"w\")\n    for department in employee_list:\n        for employee in department:\n            file.write(employee + \"\\n\")\n    file.close()\nemployee_list = [['60b90c1c13067a15887e1ae1,Tayson,3', '60b90c2413067a15887e1ae2,Vika,1'], ['60b90c2e13067a15887e1ae3,Barsik,2']]\npath_to_file = \"./module_6/employees.txt\"\nwrite_employees_to_file(employee_list, path_to_file)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.1_write_employees_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "employee_list",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.1_write_employees_to_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.1_write_employees_to_file",
+        "peekOfCode": "employee_list = [['60b90c1c13067a15887e1ae1,Tayson,3', '60b90c2413067a15887e1ae2,Vika,1'], ['60b90c2e13067a15887e1ae3,Barsik,2']]\npath_to_file = \"./module_6/employees.txt\"\nwrite_employees_to_file(employee_list, path_to_file)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.1_write_employees_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "path_to_file",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.1_write_employees_to_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.1_write_employees_to_file",
+        "peekOfCode": "path_to_file = \"./module_6/employees.txt\"\nwrite_employees_to_file(employee_list, path_to_file)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.1_write_employees_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "read_employees_from_file",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.2_read_employees_from_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.2_read_employees_from_file",
+        "peekOfCode": "def read_employees_from_file(path):\n    file = open(path, \"r\")\n    employees = [line.strip() for line in file.readlines()]\n    file.close()\n    return employees\npath_to_file = \"./module_6/employees.txt\"\nemployees_list = read_employees_from_file(path_to_file)\nprint(employees_list)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.2_read_employees_from_file",
+        "documentation": {}
+    },
+    {
+        "label": "path_to_file",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.2_read_employees_from_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.2_read_employees_from_file",
+        "peekOfCode": "path_to_file = \"./module_6/employees.txt\"\nemployees_list = read_employees_from_file(path_to_file)\nprint(employees_list)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.2_read_employees_from_file",
+        "documentation": {}
+    },
+    {
+        "label": "employees_list",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.2_read_employees_from_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.2_read_employees_from_file",
+        "peekOfCode": "employees_list = read_employees_from_file(path_to_file)\nprint(employees_list)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.2_read_employees_from_file",
+        "documentation": {}
+    },
+    {
+        "label": "add_employee_to_file",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.3_add_employee_to_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.3_add_employee_to_file",
+        "peekOfCode": "def add_employee_to_file(record, path):\n    file = open(path, \"a\")\n    file.write(record + \"\\n\")\n    file.close()\npath_to_file = \"./module_6/employees.txt\"\nemployee_record = \"60b90c1c13067a15887e1ae1,Tayson,3\"\nadd_employee_to_file(employee_record, path_to_file)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.3_add_employee_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "path_to_file",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.3_add_employee_to_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.3_add_employee_to_file",
+        "peekOfCode": "path_to_file = \"./module_6/employees.txt\"\nemployee_record = \"60b90c1c13067a15887e1ae1,Tayson,3\"\nadd_employee_to_file(employee_record, path_to_file)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.3_add_employee_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "employee_record",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.3_add_employee_to_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.3_add_employee_to_file",
+        "peekOfCode": "employee_record = \"60b90c1c13067a15887e1ae1,Tayson,3\"\nadd_employee_to_file(employee_record, path_to_file)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.3_add_employee_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "sanitize_file",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.5_sanitize_file copy",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.5_sanitize_file copy",
+        "peekOfCode": "def sanitize_file(source, output):\n     with open(source, \"r\") as file:\n         source_content = file.read()\n     prepared_content = ''.join(char for char in source_content if not char.isdigit())\n     with open(output, \"w\") as output:\n        output.write(prepared_content) \nsource_file_path = \"./module_6/employees.txt\"\noutput_file_path = \"./module_6/output.txt\"\nsanitize_file(source_file_path, output_file_path)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.5_sanitize_file copy",
+        "documentation": {}
+    },
+    {
+        "label": "source_file_path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.5_sanitize_file copy",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.5_sanitize_file copy",
+        "peekOfCode": "source_file_path = \"./module_6/employees.txt\"\noutput_file_path = \"./module_6/output.txt\"\nsanitize_file(source_file_path, output_file_path)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.5_sanitize_file copy",
+        "documentation": {}
+    },
+    {
+        "label": "output_file_path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.5_sanitize_file copy",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.5_sanitize_file copy",
+        "peekOfCode": "output_file_path = \"./module_6/output.txt\"\nsanitize_file(source_file_path, output_file_path)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.5_sanitize_file copy",
+        "documentation": {}
+    },
+    {
+        "label": "save_applicant_data",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.6_save_applicant_data",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.6_save_applicant_data",
+        "peekOfCode": "def save_applicant_data(source, output):\n    with open(output, \"w\") as output:\n        for application in source:\n            prepared_content = f\"{application['name']},{application['specialty']},{application['math']},{application['lang']},{application['eng']}\\n\"\n            output.write(prepared_content)  \nsource = [\n    {\n        \"name\": \"Kovalchuk Oleksiy\",\n        \"specialty\": 301,\n        \"math\": 175,",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.6_save_applicant_data",
+        "documentation": {}
+    },
+    {
+        "label": "source",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.6_save_applicant_data",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.6_save_applicant_data",
+        "peekOfCode": "source = [\n    {\n        \"name\": \"Kovalchuk Oleksiy\",\n        \"specialty\": 301,\n        \"math\": 175,\n        \"lang\": 180,\n        \"eng\": 155,\n    },\n    {\n        \"name\": \"Ivanchuk Boryslav\",",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.6_save_applicant_data",
+        "documentation": {}
+    },
+    {
+        "label": "output_path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.6_save_applicant_data",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.6_save_applicant_data",
+        "peekOfCode": "output_path = \"./module_6/output.txt\"\nsave_applicant_data(source,output_path)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.6_save_applicant_data",
+        "documentation": {}
+    },
+    {
+        "label": "logged_func",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "def logged_func(func):\n    def inner(utf8_string, utf16_string):\n        print(f'called with {utf8_string}, {utf16_string}')\n        result = func(utf8_string, utf16_string)\n        print(f'result: {result}')\n        return result\n    return inner\n@logged_func\ndef is_equal_string(utf8_string, utf16_string):\n    try:",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "is_equal_string",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "def is_equal_string(utf8_string, utf16_string):\n    try:\n        # Decode utf8_string and utf16_string to Unicode strings\n        unicode_utf8 = utf8_string.decode('utf-8')\n        unicode_utf16 = utf16_string.decode('utf-16')\n        # Compare the Unicode strings\n        return unicode_utf8 == unicode_utf16\n    except UnicodeDecodeError:\n        # Handle decoding errors (e.g., invalid encoding)\n        return False",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "utf8_str",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "utf8_str = b'This is a utf-8 string'\nutf16_str = b'\\xff\\xfeT\\x00h\\x00i\\x00s\\x00 \\x00i\\x00s\\x00 \\x00a\\x00 \\x00u\\x00t\\x00f\\x00-\\x008\\x00 \\x00s\\x00t\\x00r\\x00i\\x00n\\x00g\\x00\\x00\\x00'\nresult = is_equal_string(utf8_str, utf16_str)\nprint(result)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "utf16_str",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "utf16_str = b'\\xff\\xfeT\\x00h\\x00i\\x00s\\x00 \\x00i\\x00s\\x00 \\x00a\\x00 \\x00u\\x00t\\x00f\\x00-\\x008\\x00 \\x00s\\x00t\\x00r\\x00i\\x00n\\x00g\\x00\\x00\\x00'\nresult = is_equal_string(utf8_str, utf16_str)\nprint(result)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "result = is_equal_string(utf8_str, utf16_str)\nprint(result)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "save_credentials_users",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.8_save_credentials_users",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.8_save_credentials_users",
+        "peekOfCode": "def save_credentials_users(path, users_info):\n    with open(path, 'wb') as file:\n        for username, password in users_info.items():\n            line = f\"{username}:{password}\\n\"\n            file.write(line.encode())\nusers_info = {'andy': 'uyro18890D', 'steve': 'oppjM13LL9e'}\npath = './module_6/user_credentials.dat'\nsave_credentials_users(path, users_info)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.8_save_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "users_info",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.8_save_credentials_users",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.8_save_credentials_users",
+        "peekOfCode": "users_info = {'andy': 'uyro18890D', 'steve': 'oppjM13LL9e'}\npath = './module_6/user_credentials.dat'\nsave_credentials_users(path, users_info)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.8_save_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.8_save_credentials_users",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.8_save_credentials_users",
+        "peekOfCode": "path = './module_6/user_credentials.dat'\nsave_credentials_users(path, users_info)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.8_save_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "get_credentials_users",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.9_get_credentials_users",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.9_get_credentials_users",
+        "peekOfCode": "def get_credentials_users(path):\n    credentials_list = []\n    with open(path, 'rb') as file:\n        for line in file:\n            credentials_list.append(line.decode().strip())\n    return credentials_list\nfile_path = './module_6/user_credentials.dat'\nresult = get_credentials_users(file_path)\nprint(result)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.9_get_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "file_path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.9_get_credentials_users",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.9_get_credentials_users",
+        "peekOfCode": "file_path = './module_6/user_credentials.dat'\nresult = get_credentials_users(file_path)\nprint(result)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.9_get_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.9_get_credentials_users",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.9_get_credentials_users",
+        "peekOfCode": "result = get_credentials_users(file_path)\nprint(result)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.module_6.9_get_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "create_backup",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "peekOfCode": "def create_backup(path, file_name, employee_residence):\n    with open(f\"{path}/{file_name}\", 'w', encoding='utf-8') as file:\n        for username, residence in employee_residence.items():\n            line = f\"{username},{residence}\\n\"\n            file.write(line)\n    folder_name = os.path.basename(path)  # Отримуємо ім'я теки\n    archive_path = shutil.make_archive(f\"{path}/{folder_name}/backup_folder\", 'zip', path)\n    return archive_path\n# Приклад використання:\nemployee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "employee_residence",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "peekOfCode": "employee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.txt'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))\n# Example usage:\nemployee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "file_name",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "peekOfCode": "file_name = 'employee_data.txt'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))\n# Example usage:\nemployee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "peekOfCode": "path = './module_6/'\nprint(create_backup(path, file_name, employee_residence))\n# Example usage:\nemployee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "employee_residence",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "peekOfCode": "employee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "file_name",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "peekOfCode": "file_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "peekOfCode": "path = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.10_create_backup(archive)",
+        "documentation": {}
+    },
+    {
+        "label": "unpack",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.11_unpack_archive",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.11_unpack_archive",
+        "peekOfCode": "def unpack(archive_path, path_to_unpack):\n    shutil.unpack_archive(archive_path, path_to_unpack)\narchive_path = './module_6/backup_folder.zip'\npath_to_unpack = './module_6/'\nunpack(archive_path, path_to_unpack)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.11_unpack_archive",
+        "documentation": {}
+    },
+    {
+        "label": "archive_path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.11_unpack_archive",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.11_unpack_archive",
+        "peekOfCode": "archive_path = './module_6/backup_folder.zip'\npath_to_unpack = './module_6/'\nunpack(archive_path, path_to_unpack)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.11_unpack_archive",
+        "documentation": {}
+    },
+    {
+        "label": "path_to_unpack",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.11_unpack_archive",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.11_unpack_archive",
+        "peekOfCode": "path_to_unpack = './module_6/'\nunpack(archive_path, path_to_unpack)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.11_unpack_archive",
+        "documentation": {}
+    },
+    {
+        "label": "write_employees_to_file",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.1_write_employees_to_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.1_write_employees_to_file",
+        "peekOfCode": "def write_employees_to_file(employee_list, path):\n    file = open(path, \"w\")\n    for department in employee_list:\n        for employee in department:\n            file.write(employee + \"\\n\")\n    file.close()\nemployee_list = [['60b90c1c13067a15887e1ae1,Tayson,3', '60b90c2413067a15887e1ae2,Vika,1'], ['60b90c2e13067a15887e1ae3,Barsik,2']]\npath_to_file = \"./module_6/employees.txt\"\nwrite_employees_to_file(employee_list, path_to_file)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.1_write_employees_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "employee_list",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.1_write_employees_to_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.1_write_employees_to_file",
+        "peekOfCode": "employee_list = [['60b90c1c13067a15887e1ae1,Tayson,3', '60b90c2413067a15887e1ae2,Vika,1'], ['60b90c2e13067a15887e1ae3,Barsik,2']]\npath_to_file = \"./module_6/employees.txt\"\nwrite_employees_to_file(employee_list, path_to_file)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.1_write_employees_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "path_to_file",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.1_write_employees_to_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.1_write_employees_to_file",
+        "peekOfCode": "path_to_file = \"./module_6/employees.txt\"\nwrite_employees_to_file(employee_list, path_to_file)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.1_write_employees_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "read_employees_from_file",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.2_read_employees_from_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.2_read_employees_from_file",
+        "peekOfCode": "def read_employees_from_file(path):\n    file = open(path, \"r\")\n    employees = [line.strip() for line in file.readlines()]\n    file.close()\n    return employees\npath_to_file = \"./module_6/employees.txt\"\nemployees_list = read_employees_from_file(path_to_file)\nprint(employees_list)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.2_read_employees_from_file",
+        "documentation": {}
+    },
+    {
+        "label": "path_to_file",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.2_read_employees_from_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.2_read_employees_from_file",
+        "peekOfCode": "path_to_file = \"./module_6/employees.txt\"\nemployees_list = read_employees_from_file(path_to_file)\nprint(employees_list)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.2_read_employees_from_file",
+        "documentation": {}
+    },
+    {
+        "label": "employees_list",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.2_read_employees_from_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.2_read_employees_from_file",
+        "peekOfCode": "employees_list = read_employees_from_file(path_to_file)\nprint(employees_list)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.2_read_employees_from_file",
+        "documentation": {}
+    },
+    {
+        "label": "add_employee_to_file",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.3_add_employee_to_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.3_add_employee_to_file",
+        "peekOfCode": "def add_employee_to_file(record, path):\n    file = open(path, \"a\")\n    file.write(record + \"\\n\")\n    file.close()\npath_to_file = \"./module_6/employees.txt\"\nemployee_record = \"60b90c1c13067a15887e1ae1,Tayson,3\"\nadd_employee_to_file(employee_record, path_to_file)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.3_add_employee_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "path_to_file",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.3_add_employee_to_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.3_add_employee_to_file",
+        "peekOfCode": "path_to_file = \"./module_6/employees.txt\"\nemployee_record = \"60b90c1c13067a15887e1ae1,Tayson,3\"\nadd_employee_to_file(employee_record, path_to_file)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.3_add_employee_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "employee_record",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.3_add_employee_to_file",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.3_add_employee_to_file",
+        "peekOfCode": "employee_record = \"60b90c1c13067a15887e1ae1,Tayson,3\"\nadd_employee_to_file(employee_record, path_to_file)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.3_add_employee_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "sanitize_file",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.5_sanitize_file copy",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.5_sanitize_file copy",
+        "peekOfCode": "def sanitize_file(source, output):\n     with open(source, \"r\") as file:\n         source_content = file.read()\n     prepared_content = ''.join(char for char in source_content if not char.isdigit())\n     with open(output, \"w\") as output:\n        output.write(prepared_content) \nsource_file_path = \"./module_6/employees.txt\"\noutput_file_path = \"./module_6/output.txt\"\nsanitize_file(source_file_path, output_file_path)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.5_sanitize_file copy",
+        "documentation": {}
+    },
+    {
+        "label": "source_file_path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.5_sanitize_file copy",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.5_sanitize_file copy",
+        "peekOfCode": "source_file_path = \"./module_6/employees.txt\"\noutput_file_path = \"./module_6/output.txt\"\nsanitize_file(source_file_path, output_file_path)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.5_sanitize_file copy",
+        "documentation": {}
+    },
+    {
+        "label": "output_file_path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.5_sanitize_file copy",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.5_sanitize_file copy",
+        "peekOfCode": "output_file_path = \"./module_6/output.txt\"\nsanitize_file(source_file_path, output_file_path)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.5_sanitize_file copy",
+        "documentation": {}
+    },
+    {
+        "label": "save_applicant_data",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.6_save_applicant_data",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.6_save_applicant_data",
+        "peekOfCode": "def save_applicant_data(source, output):\n    with open(output, \"w\") as output:\n        for application in source:\n            prepared_content = f\"{application['name']},{application['specialty']},{application['math']},{application['lang']},{application['eng']}\\n\"\n            output.write(prepared_content)  \nsource = [\n    {\n        \"name\": \"Kovalchuk Oleksiy\",\n        \"specialty\": 301,\n        \"math\": 175,",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.6_save_applicant_data",
+        "documentation": {}
+    },
+    {
+        "label": "source",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.6_save_applicant_data",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.6_save_applicant_data",
+        "peekOfCode": "source = [\n    {\n        \"name\": \"Kovalchuk Oleksiy\",\n        \"specialty\": 301,\n        \"math\": 175,\n        \"lang\": 180,\n        \"eng\": 155,\n    },\n    {\n        \"name\": \"Ivanchuk Boryslav\",",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.6_save_applicant_data",
+        "documentation": {}
+    },
+    {
+        "label": "output_path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.6_save_applicant_data",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.6_save_applicant_data",
+        "peekOfCode": "output_path = \"./module_6/output.txt\"\nsave_applicant_data(source,output_path)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.6_save_applicant_data",
+        "documentation": {}
+    },
+    {
+        "label": "logged_func",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "def logged_func(func):\n    def inner(utf8_string, utf16_string):\n        print(f'called with {utf8_string}, {utf16_string}')\n        result = func(utf8_string, utf16_string)\n        print(f'result: {result}')\n        return result\n    return inner\n@logged_func\ndef is_equal_string(utf8_string, utf16_string):\n    try:",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "is_equal_string",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "def is_equal_string(utf8_string, utf16_string):\n    try:\n        # Decode utf8_string and utf16_string to Unicode strings\n        unicode_utf8 = utf8_string.decode('utf-8')\n        unicode_utf16 = utf16_string.decode('utf-16')\n        # Compare the Unicode strings\n        return unicode_utf8 == unicode_utf16\n    except UnicodeDecodeError:\n        # Handle decoding errors (e.g., invalid encoding)\n        return False",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "utf8_str",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "utf8_str = b'This is a utf-8 string'\nutf16_str = b'\\xff\\xfeT\\x00h\\x00i\\x00s\\x00 \\x00i\\x00s\\x00 \\x00a\\x00 \\x00u\\x00t\\x00f\\x00-\\x008\\x00 \\x00s\\x00t\\x00r\\x00i\\x00n\\x00g\\x00\\x00\\x00'\nresult = is_equal_string(utf8_str, utf16_str)\nprint(result)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "utf16_str",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "utf16_str = b'\\xff\\xfeT\\x00h\\x00i\\x00s\\x00 \\x00i\\x00s\\x00 \\x00a\\x00 \\x00u\\x00t\\x00f\\x00-\\x008\\x00 \\x00s\\x00t\\x00r\\x00i\\x00n\\x00g\\x00\\x00\\x00'\nresult = is_equal_string(utf8_str, utf16_str)\nprint(result)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "result = is_equal_string(utf8_str, utf16_str)\nprint(result)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "save_credentials_users",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.8_save_credentials_users",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.8_save_credentials_users",
+        "peekOfCode": "def save_credentials_users(path, users_info):\n    with open(path, 'wb') as file:\n        for username, password in users_info.items():\n            line = f\"{username}:{password}\\n\"\n            file.write(line.encode())\nusers_info = {'andy': 'uyro18890D', 'steve': 'oppjM13LL9e'}\npath = './module_6/user_credentials.dat'\nsave_credentials_users(path, users_info)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.8_save_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "users_info",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.8_save_credentials_users",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.8_save_credentials_users",
+        "peekOfCode": "users_info = {'andy': 'uyro18890D', 'steve': 'oppjM13LL9e'}\npath = './module_6/user_credentials.dat'\nsave_credentials_users(path, users_info)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.8_save_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.8_save_credentials_users",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.8_save_credentials_users",
+        "peekOfCode": "path = './module_6/user_credentials.dat'\nsave_credentials_users(path, users_info)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.8_save_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "get_credentials_users",
+        "kind": 2,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.9_get_credentials_users",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.9_get_credentials_users",
+        "peekOfCode": "def get_credentials_users(path):\n    credentials_list = []\n    with open(path, 'rb') as file:\n        for line in file:\n            credentials_list.append(line.decode().strip())\n    return credentials_list\nfile_path = './module_6/user_credentials.dat'\nresult = get_credentials_users(file_path)\nprint(result)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.9_get_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "file_path",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.9_get_credentials_users",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.9_get_credentials_users",
+        "peekOfCode": "file_path = './module_6/user_credentials.dat'\nresult = get_credentials_users(file_path)\nprint(result)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.9_get_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.9_get_credentials_users",
+        "description": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.9_get_credentials_users",
+        "peekOfCode": "result = get_credentials_users(file_path)\nprint(result)",
+        "detail": "Users.kornyshevaekaterina.Documents.GoIt.Projects.first_repo.9_get_credentials_users",
         "documentation": {}
     },
     {
@@ -283,6 +956,870 @@
         "description": "all.main copy",
         "peekOfCode": "result = lookup_key(my_dict, search_value)\nprint(f\"Ключі для значення {search_value}: {result}\")",
         "detail": "all.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "IDException",
+        "kind": 6,
+        "importPath": "module_10_class.10_IDException copy",
+        "description": "module_10_class.10_IDException copy",
+        "peekOfCode": "class IDException(Exception):\n    pass\ndef add_id(id_list, employee_id):\n    if not employee_id.startswith('01'):\n        raise IDException(\"Id must started with 01\")\n    id_list.append(employee_id)\n    return id_list\nid_list = ['0101', '0110', '0101']\ntry:\n    new_id_list = add_id(id_list, '0110')",
+        "detail": "module_10_class.10_IDException copy",
+        "documentation": {}
+    },
+    {
+        "label": "add_id",
+        "kind": 2,
+        "importPath": "module_10_class.10_IDException copy",
+        "description": "module_10_class.10_IDException copy",
+        "peekOfCode": "def add_id(id_list, employee_id):\n    if not employee_id.startswith('01'):\n        raise IDException(\"Id must started with 01\")\n    id_list.append(employee_id)\n    return id_list\nid_list = ['0101', '0110', '0101']\ntry:\n    new_id_list = add_id(id_list, '0110')\n    print(\"Updated ID list:\", new_id_list)\nexcept IDException as e:",
+        "detail": "module_10_class.10_IDException copy",
+        "documentation": {}
+    },
+    {
+        "label": "id_list",
+        "kind": 5,
+        "importPath": "module_10_class.10_IDException copy",
+        "description": "module_10_class.10_IDException copy",
+        "peekOfCode": "id_list = ['0101', '0110', '0101']\ntry:\n    new_id_list = add_id(id_list, '0110')\n    print(\"Updated ID list:\", new_id_list)\nexcept IDException as e:\n    print(\"Error:\", e)",
+        "detail": "module_10_class.10_IDException copy",
+        "documentation": {}
+    },
+    {
+        "label": "Animal",
+        "kind": 6,
+        "importPath": "module_10_class.11_CatDog",
+        "description": "module_10_class.11_CatDog",
+        "peekOfCode": "class Animal:\n    def __init__(self, nickname, weight):\n        self.nickname = nickname\n        self.weight = weight\n    def say(self):\n        pass\n    def change_weight(self, weight):\n        self.weight = weight\nclass Cat(Animal):\n    def say(self):",
+        "detail": "module_10_class.11_CatDog",
+        "documentation": {}
+    },
+    {
+        "label": "Cat",
+        "kind": 6,
+        "importPath": "module_10_class.11_CatDog",
+        "description": "module_10_class.11_CatDog",
+        "peekOfCode": "class Cat(Animal):\n    def say(self):\n        return \"Meow\"\nclass CatDog:\n    def __init__(self, nickname, weight):\n        self.nickname = nickname\n        self.weight = weight\n    def say(self):\n        return \"Meow\"\n    def change_weight(self, weight):",
+        "detail": "module_10_class.11_CatDog",
+        "documentation": {}
+    },
+    {
+        "label": "CatDog",
+        "kind": 6,
+        "importPath": "module_10_class.11_CatDog",
+        "description": "module_10_class.11_CatDog",
+        "peekOfCode": "class CatDog:\n    def __init__(self, nickname, weight):\n        self.nickname = nickname\n        self.weight = weight\n    def say(self):\n        return \"Meow\"\n    def change_weight(self, weight):\n        self.weight = weight\ncat_dog = CatDog(\"Simon\", 10)\nprint(cat_dog.say())",
+        "detail": "module_10_class.11_CatDog",
+        "documentation": {}
+    },
+    {
+        "label": "cat_dog",
+        "kind": 5,
+        "importPath": "module_10_class.11_CatDog",
+        "description": "module_10_class.11_CatDog",
+        "peekOfCode": "cat_dog = CatDog(\"Simon\", 10)\nprint(cat_dog.say())",
+        "detail": "module_10_class.11_CatDog",
+        "documentation": {}
+    },
+    {
+        "label": "Contacts",
+        "kind": 6,
+        "importPath": "module_10_class.12_Contacts",
+        "description": "module_10_class.12_Contacts",
+        "peekOfCode": "class Contacts:\n    current_id = 1\n    def __init__(self):\n        self.contacts = []\n    def list_contacts(self):\n        return self.contacts\n    def add_contacts(self, name, phone, email, favorite):\n        contact = {\n            \"id\": Contacts.current_id,\n            \"name\": name,",
+        "detail": "module_10_class.12_Contacts",
+        "documentation": {}
+    },
+    {
+        "label": "contact",
+        "kind": 5,
+        "importPath": "module_10_class.12_Contacts",
+        "description": "module_10_class.12_Contacts",
+        "peekOfCode": "contact = Contacts()\ncontact.add_contacts('Wylie Pope', '(692) 802-2949', 'est@utquamvel.net', False)\ncontact.add_contacts('Cyrus Jackson', '(501) 472-5218', 'nibh@semsempererat.com', True)\ncontact.add_contacts('Wylie Pope', '(692) 802-2949', 'est@utquamvel.net', False)\ncontact.add_contacts('Cyrus Jackson', '(501) 472-5218', 'nibh@semsempererat.com', True)\nprint(contact.list_contacts())",
+        "detail": "module_10_class.12_Contacts",
+        "documentation": {}
+    },
+    {
+        "label": "Animal",
+        "kind": 6,
+        "importPath": "module_10_class.1_2_class_Animal",
+        "description": "module_10_class.1_2_class_Animal",
+        "peekOfCode": "class Animal:\n    def __init__(self, nickname, weight):\n        self.nickname = nickname\n        self.weight = weight\n    def say():\n        pass\nanimal = Animal(\"Musia\", 3.9)\nprint(animal)",
+        "detail": "module_10_class.1_2_class_Animal",
+        "documentation": {}
+    },
+    {
+        "label": "animal",
+        "kind": 5,
+        "importPath": "module_10_class.1_2_class_Animal",
+        "description": "module_10_class.1_2_class_Animal",
+        "peekOfCode": "animal = Animal(\"Musia\", 3.9)\nprint(animal)",
+        "detail": "module_10_class.1_2_class_Animal",
+        "documentation": {}
+    },
+    {
+        "label": "Animal",
+        "kind": 6,
+        "importPath": "module_10_class.3_change_weight copy",
+        "description": "module_10_class.3_change_weight copy",
+        "peekOfCode": "class Animal:\n    def __init__(self, nickname, weight):\n        self.nickname = nickname\n        self.weight = weight\n    def say(self):\n        pass\n    def change_weight(self, new_weight):\n        self.weight = new_weight\nanimal = Animal(\"Musia\", 3.9)\nanimal.change_weight(4)",
+        "detail": "module_10_class.3_change_weight copy",
+        "documentation": {}
+    },
+    {
+        "label": "animal",
+        "kind": 5,
+        "importPath": "module_10_class.3_change_weight copy",
+        "description": "module_10_class.3_change_weight copy",
+        "peekOfCode": "animal = Animal(\"Musia\", 3.9)\nanimal.change_weight(4)\nprint(animal.weight)",
+        "detail": "module_10_class.3_change_weight copy",
+        "documentation": {}
+    },
+    {
+        "label": "Animal",
+        "kind": 6,
+        "importPath": "module_10_class.4_change_color",
+        "description": "module_10_class.4_change_color",
+        "peekOfCode": "class Animal:\n    colour = \"white\"\n    def __init__(self, nickname, weight):\n        self.nickname = nickname\n        self.weight = weight\n    def say(self):\n        pass\n    def change_weight(self, new_weight):\n        self.weight = new_weight\n    def change_color(self, colour):",
+        "detail": "module_10_class.4_change_color",
+        "documentation": {}
+    },
+    {
+        "label": "first_animal",
+        "kind": 5,
+        "importPath": "module_10_class.4_change_color",
+        "description": "module_10_class.4_change_color",
+        "peekOfCode": "first_animal = Animal(\"Musia\", 3.9)\nsecond_animal = Animal(\"Pusia\", 2.1)\nAnimal.colour = \"red\"\nprint(first_animal.colour, second_animal.colour)",
+        "detail": "module_10_class.4_change_color",
+        "documentation": {}
+    },
+    {
+        "label": "second_animal",
+        "kind": 5,
+        "importPath": "module_10_class.4_change_color",
+        "description": "module_10_class.4_change_color",
+        "peekOfCode": "second_animal = Animal(\"Pusia\", 2.1)\nAnimal.colour = \"red\"\nprint(first_animal.colour, second_animal.colour)",
+        "detail": "module_10_class.4_change_color",
+        "documentation": {}
+    },
+    {
+        "label": "Animal.colour",
+        "kind": 5,
+        "importPath": "module_10_class.4_change_color",
+        "description": "module_10_class.4_change_color",
+        "peekOfCode": "Animal.colour = \"red\"\nprint(first_animal.colour, second_animal.colour)",
+        "detail": "module_10_class.4_change_color",
+        "documentation": {}
+    },
+    {
+        "label": "Animal",
+        "kind": 6,
+        "importPath": "module_10_class.5_Cat",
+        "description": "module_10_class.5_Cat",
+        "peekOfCode": "class Animal:\n    def __init__(self, nickname, weight):\n        self.nickname = nickname\n        self.weight = weight\n    def say(self):\n        pass\n    def change_weight(self, weight):\n        self.weight = weight\nclass Cat(Animal):\n    def say(self):",
+        "detail": "module_10_class.5_Cat",
+        "documentation": {}
+    },
+    {
+        "label": "Cat",
+        "kind": 6,
+        "importPath": "module_10_class.5_Cat",
+        "description": "module_10_class.5_Cat",
+        "peekOfCode": "class Cat(Animal):\n    def say(self):\n        return \"Meow\"\ncat = Cat(\"Simon\", 10)\nprint(cat.say())",
+        "detail": "module_10_class.5_Cat",
+        "documentation": {}
+    },
+    {
+        "label": "cat",
+        "kind": 5,
+        "importPath": "module_10_class.5_Cat",
+        "description": "module_10_class.5_Cat",
+        "peekOfCode": "cat = Cat(\"Simon\", 10)\nprint(cat.say())",
+        "detail": "module_10_class.5_Cat",
+        "documentation": {}
+    },
+    {
+        "label": "Animal",
+        "kind": 6,
+        "importPath": "module_10_class.6_Dog",
+        "description": "module_10_class.6_Dog",
+        "peekOfCode": "class Animal:\n    def __init__(self, nickname, weight):\n        self.nickname = nickname\n        self.weight = weight\n    def say(self):\n        pass\n    def change_weight(self, weight):\n        self.weight = weight\nclass Dog(Animal):\n     def __init__(self, nickname, weight, breed):",
+        "detail": "module_10_class.6_Dog",
+        "documentation": {}
+    },
+    {
+        "label": "Dog",
+        "kind": 6,
+        "importPath": "module_10_class.6_Dog",
+        "description": "module_10_class.6_Dog",
+        "peekOfCode": "class Dog(Animal):\n     def __init__(self, nickname, weight, breed):\n        super().__init__(nickname, weight)\n        self.breed = breed\n     def say(self):\n        return \"Woof\"\ndog = Dog(\"Barbos\", 23, \"labrador\")\nprint(dog.say())",
+        "detail": "module_10_class.6_Dog",
+        "documentation": {}
+    },
+    {
+        "label": "dog",
+        "kind": 5,
+        "importPath": "module_10_class.6_Dog",
+        "description": "module_10_class.6_Dog",
+        "peekOfCode": "dog = Dog(\"Barbos\", 23, \"labrador\")\n\"\"\"\nclass Animal:\n    def __init__(self, nickname, weight):\n        self.nickname = nickname\n        self.weight = weight\n    def say(self):\n        pass\n    def change_weight(self, weight):\n        self.weight = weight",
+        "detail": "module_10_class.6_Dog",
+        "documentation": {}
+    },
+    {
+        "label": "dog",
+        "kind": 5,
+        "importPath": "module_10_class.6_Dog",
+        "description": "module_10_class.6_Dog",
+        "peekOfCode": "dog = Dog(\"Barbos\", 23, \"labrador\")\nprint(dog.say())",
+        "detail": "module_10_class.6_Dog",
+        "documentation": {}
+    },
+    {
+        "label": "Animal",
+        "kind": 6,
+        "importPath": "module_10_class.7_owner",
+        "description": "module_10_class.7_owner",
+        "peekOfCode": "class Animal:\n    def __init__(self, nickname, weight):\n        self.nickname = nickname\n        self.weight = weight\n    def say(self):\n        pass\n    def change_weight(self, weight):\n        self.weight = weight\nclass Owner:\n    def __init__(self,name, age, address):",
+        "detail": "module_10_class.7_owner",
+        "documentation": {}
+    },
+    {
+        "label": "Owner",
+        "kind": 6,
+        "importPath": "module_10_class.7_owner",
+        "description": "module_10_class.7_owner",
+        "peekOfCode": "class Owner:\n    def __init__(self,name, age, address):\n        self.name = name\n        self.age = age\n        self.address = address\n    def info(self):\n        return {'name': self.name, 'age': self.age, 'address': self.address}\nclass Dog(Animal):\n    def __init__(self, nickname, weight, breed, owner: Owner):\n        self.breed = breed",
+        "detail": "module_10_class.7_owner",
+        "documentation": {}
+    },
+    {
+        "label": "Dog",
+        "kind": 6,
+        "importPath": "module_10_class.7_owner",
+        "description": "module_10_class.7_owner",
+        "peekOfCode": "class Dog(Animal):\n    def __init__(self, nickname, weight, breed, owner: Owner):\n        self.breed = breed\n        self.owner = owner\n        super().__init__(nickname, weight)\n    def say(self):\n        return \"Woof\"\n    def who_is_owner(self):\n        return self.owner.info()\nowner = Owner(\"Sherlock\", 24, \"London, 221B Baker Street\")",
+        "detail": "module_10_class.7_owner",
+        "documentation": {}
+    },
+    {
+        "label": "owner",
+        "kind": 5,
+        "importPath": "module_10_class.7_owner",
+        "description": "module_10_class.7_owner",
+        "peekOfCode": "owner = Owner(\"Sherlock\", 24, \"London, 221B Baker Street\")\ndog = Dog(\"Simon\", 10, \"british\", owner)\nprint(dog.who_is_owner())",
+        "detail": "module_10_class.7_owner",
+        "documentation": {}
+    },
+    {
+        "label": "dog",
+        "kind": 5,
+        "importPath": "module_10_class.7_owner",
+        "description": "module_10_class.7_owner",
+        "peekOfCode": "dog = Dog(\"Simon\", 10, \"british\", owner)\nprint(dog.who_is_owner())",
+        "detail": "module_10_class.7_owner",
+        "documentation": {}
+    },
+    {
+        "label": "AmountPaymentList",
+        "kind": 6,
+        "importPath": "module_10_class.8_AmountPaymentList",
+        "description": "module_10_class.8_AmountPaymentList",
+        "peekOfCode": "class AmountPaymentList(UserList):\n    def amount_payment(self):\n        return sum(map(lambda x: int(x) if x > 0 else 0, self.data))\npayment = [1, -3, 4]\nprint(amount_payment(payment))\ncountable = AmountPaymentList([1, -3, 4])\nprint(countable.amount_payment())",
+        "detail": "module_10_class.8_AmountPaymentList",
+        "documentation": {}
+    },
+    {
+        "label": "amount_payment",
+        "kind": 2,
+        "importPath": "module_10_class.8_AmountPaymentList",
+        "description": "module_10_class.8_AmountPaymentList",
+        "peekOfCode": "def amount_payment(payment):\n    sum = 0\n    for value in payment:\n        if value > 0:\n            sum = sum + value\n    return sum\nНагадаємо умову. У нас є список показань заборгованостей з комунальних послуг наприкінці місяця, список payment. Заборгованості можуть бути від'ємними — у нас переплата, або додатними, якщо потрібно сплатити за рахунками.\nСтворіть клас AmountPaymentList, успадковуйте його від класу UserList. Зробіть функцію amount_payment методом класу AmountPaymentList.\n\"\"\"\nfrom collections import UserList",
+        "detail": "module_10_class.8_AmountPaymentList",
+        "documentation": {}
+    },
+    {
+        "label": "amount_payment",
+        "kind": 2,
+        "importPath": "module_10_class.8_AmountPaymentList",
+        "description": "module_10_class.8_AmountPaymentList",
+        "peekOfCode": "def amount_payment(payment):\n    sum = 0\n    for value in payment:\n        if value > 0:\n            sum = sum + value\n    return sum\nclass AmountPaymentList(UserList):\n    def amount_payment(self):\n        return sum(map(lambda x: int(x) if x > 0 else 0, self.data))\npayment = [1, -3, 4]",
+        "detail": "module_10_class.8_AmountPaymentList",
+        "documentation": {}
+    },
+    {
+        "label": "payment",
+        "kind": 5,
+        "importPath": "module_10_class.8_AmountPaymentList",
+        "description": "module_10_class.8_AmountPaymentList",
+        "peekOfCode": "payment = [1, -3, 4]\ndef amount_payment(payment):\n    sum = 0\n    for value in payment:\n        if value > 0:\n            sum = sum + value\n    return sum\nНагадаємо умову. У нас є список показань заборгованостей з комунальних послуг наприкінці місяця, список payment. Заборгованості можуть бути від'ємними — у нас переплата, або додатними, якщо потрібно сплатити за рахунками.\nСтворіть клас AmountPaymentList, успадковуйте його від класу UserList. Зробіть функцію amount_payment методом класу AmountPaymentList.\n\"\"\"",
+        "detail": "module_10_class.8_AmountPaymentList",
+        "documentation": {}
+    },
+    {
+        "label": "payment",
+        "kind": 5,
+        "importPath": "module_10_class.8_AmountPaymentList",
+        "description": "module_10_class.8_AmountPaymentList",
+        "peekOfCode": "payment = [1, -3, 4]\nprint(amount_payment(payment))\ncountable = AmountPaymentList([1, -3, 4])\nprint(countable.amount_payment())",
+        "detail": "module_10_class.8_AmountPaymentList",
+        "documentation": {}
+    },
+    {
+        "label": "countable",
+        "kind": 5,
+        "importPath": "module_10_class.8_AmountPaymentList",
+        "description": "module_10_class.8_AmountPaymentList",
+        "peekOfCode": "countable = AmountPaymentList([1, -3, 4])\nprint(countable.amount_payment())",
+        "detail": "module_10_class.8_AmountPaymentList",
+        "documentation": {}
+    },
+    {
+        "label": "NumberString",
+        "kind": 6,
+        "importPath": "module_10_class.9_NumberString",
+        "description": "module_10_class.9_NumberString",
+        "peekOfCode": "class NumberString(UserString):\n    # number_count = lambda self: sum(1 for char in self.data if char.isdigit())\n    def number_count(self):\n        return sum(1 for char in self.data if char.isdigit())\ncountable = NumberString('dfgdfg 345')\nprint(countable.number_count())",
+        "detail": "module_10_class.9_NumberString",
+        "documentation": {}
+    },
+    {
+        "label": "countable",
+        "kind": 5,
+        "importPath": "module_10_class.9_NumberString",
+        "description": "module_10_class.9_NumberString",
+        "peekOfCode": "countable = NumberString('dfgdfg 345')\nprint(countable.number_count())",
+        "detail": "module_10_class.9_NumberString",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "kind": 6,
+        "importPath": "module_11.10_magic_func",
+        "description": "module_11.10_magic_func",
+        "peekOfCode": "class Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y\n    @property\n    def x(self):\n        return self.__x\n    @x.setter",
+        "detail": "module_11.10_magic_func",
+        "documentation": {}
+    },
+    {
+        "label": "Vector",
+        "kind": 6,
+        "importPath": "module_11.10_magic_func",
+        "description": "module_11.10_magic_func",
+        "peekOfCode": "class Vector:\n    def __init__(self, coordinates: Point):\n        self.coordinates = coordinates\n    def __setitem__(self, index, value):\n        if index == 0:\n            self.coordinates.x = value\n        if index == 1:\n            self.coordinates.y = value\n    def __getitem__(self, index):\n        if index == 0:",
+        "detail": "module_11.10_magic_func",
+        "documentation": {}
+    },
+    {
+        "label": "vector1",
+        "kind": 5,
+        "importPath": "module_11.10_magic_func",
+        "description": "module_11.10_magic_func",
+        "peekOfCode": "vector1 = Vector(Point(1, 10))\nvector2 = Vector(Point(3, 10))\nprint(vector1 == vector2)  # False\nprint(vector1 != vector2)  # True\nprint(vector1 > vector2)  # False\nprint(vector1 < vector2)  # True\nprint(vector1 >= vector2)  # False\nprint(vector1 <= vector2)  # True\n\"\"\"\nclass Point:",
+        "detail": "module_11.10_magic_func",
+        "documentation": {}
+    },
+    {
+        "label": "vector2",
+        "kind": 5,
+        "importPath": "module_11.10_magic_func",
+        "description": "module_11.10_magic_func",
+        "peekOfCode": "vector2 = Vector(Point(3, 10))\nprint(vector1 == vector2)  # False\nprint(vector1 != vector2)  # True\nprint(vector1 > vector2)  # False\nprint(vector1 < vector2)  # True\nprint(vector1 >= vector2)  # False\nprint(vector1 <= vector2)  # True\n\"\"\"\nclass Point:\n    def __init__(self, x, y):",
+        "detail": "module_11.10_magic_func",
+        "documentation": {}
+    },
+    {
+        "label": "vector1",
+        "kind": 5,
+        "importPath": "module_11.10_magic_func",
+        "description": "module_11.10_magic_func",
+        "peekOfCode": "vector1 = Vector(Point(1, 10))\nvector2 = Vector(Point(3, 10))\nprint(vector1 == vector2)  # False\nprint(vector1 != vector2)  # True\nprint(vector1 > vector2)  # False\nprint(vector1 < vector2)  # True\nprint(vector1 >= vector2)  # False\nprint(vector1 <= vector2)  # True",
+        "detail": "module_11.10_magic_func",
+        "documentation": {}
+    },
+    {
+        "label": "vector2",
+        "kind": 5,
+        "importPath": "module_11.10_magic_func",
+        "description": "module_11.10_magic_func",
+        "peekOfCode": "vector2 = Vector(Point(3, 10))\nprint(vector1 == vector2)  # False\nprint(vector1 != vector2)  # True\nprint(vector1 > vector2)  # False\nprint(vector1 < vector2)  # True\nprint(vector1 >= vector2)  # False\nprint(vector1 <= vector2)  # True",
+        "detail": "module_11.10_magic_func",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "kind": 6,
+        "importPath": "module_11.1_Point",
+        "description": "module_11.1_Point",
+        "peekOfCode": "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\npoint = Point(5, 10)\nprint(point.x)  # 5\nprint(point.y)  # 10",
+        "detail": "module_11.1_Point",
+        "documentation": {}
+    },
+    {
+        "label": "point",
+        "kind": 5,
+        "importPath": "module_11.1_Point",
+        "description": "module_11.1_Point",
+        "peekOfCode": "point = Point(5, 10)\nprint(point.x)  # 5\nprint(point.y)  # 10\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\npoint = Point(5, 10)\nprint(point.x)  # 5",
+        "detail": "module_11.1_Point",
+        "documentation": {}
+    },
+    {
+        "label": "point",
+        "kind": 5,
+        "importPath": "module_11.1_Point",
+        "description": "module_11.1_Point",
+        "peekOfCode": "point = Point(5, 10)\nprint(point.x)  # 5\nprint(point.y)  # 10",
+        "detail": "module_11.1_Point",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "kind": 6,
+        "importPath": "module_11.2_incapsulation_setter",
+        "description": "module_11.2_incapsulation_setter",
+        "peekOfCode": "class Point:\n    def __init__(self, x, y):\n        self.__x = x\n        self.__y = y\n    @property\n    def x(self):\n        return self.__x\n    @x.setter\n    def set_x(self, new_value):\n       self.__x = new_value",
+        "detail": "module_11.2_incapsulation_setter",
+        "documentation": {}
+    },
+    {
+        "label": "point",
+        "kind": 5,
+        "importPath": "module_11.2_incapsulation_setter",
+        "description": "module_11.2_incapsulation_setter",
+        "peekOfCode": "point = Point(5, 10)\nprint(point.x)  # 5\nprint(point.y)  # 10\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = x\n        self.__y = y\n    @property\n    def x(self):",
+        "detail": "module_11.2_incapsulation_setter",
+        "documentation": {}
+    },
+    {
+        "label": "point",
+        "kind": 5,
+        "importPath": "module_11.2_incapsulation_setter",
+        "description": "module_11.2_incapsulation_setter",
+        "peekOfCode": "point = Point(5, 10)\nprint(point.x)  # 5\nprint(point.y)  # 10",
+        "detail": "module_11.2_incapsulation_setter",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "kind": 6,
+        "importPath": "module_11.3_incapsulation_getter",
+        "description": "module_11.3_incapsulation_getter",
+        "peekOfCode": "class Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y\n    @property\n    def x(self):\n        return self.__x\n    @x.setter",
+        "detail": "module_11.3_incapsulation_getter",
+        "documentation": {}
+    },
+    {
+        "label": "point",
+        "kind": 5,
+        "importPath": "module_11.3_incapsulation_getter",
+        "description": "module_11.3_incapsulation_getter",
+        "peekOfCode": "point = Point(\"a\", 10)\nprint(point.x)  # None\nprint(point.y)  # 10\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y",
+        "detail": "module_11.3_incapsulation_getter",
+        "documentation": {}
+    },
+    {
+        "label": "point",
+        "kind": 5,
+        "importPath": "module_11.3_incapsulation_getter",
+        "description": "module_11.3_incapsulation_getter",
+        "peekOfCode": "point = Point(\"a\", 10)\npoint = Point(5, 10)\npoint = Point(True, 10)\nprint(point.x)  # None\nprint(point.y)  # 10",
+        "detail": "module_11.3_incapsulation_getter",
+        "documentation": {}
+    },
+    {
+        "label": "point",
+        "kind": 5,
+        "importPath": "module_11.3_incapsulation_getter",
+        "description": "module_11.3_incapsulation_getter",
+        "peekOfCode": "point = Point(5, 10)\npoint = Point(True, 10)\nprint(point.x)  # None\nprint(point.y)  # 10",
+        "detail": "module_11.3_incapsulation_getter",
+        "documentation": {}
+    },
+    {
+        "label": "point",
+        "kind": 5,
+        "importPath": "module_11.3_incapsulation_getter",
+        "description": "module_11.3_incapsulation_getter",
+        "peekOfCode": "point = Point(True, 10)\nprint(point.x)  # None\nprint(point.y)  # 10",
+        "detail": "module_11.3_incapsulation_getter",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "kind": 6,
+        "importPath": "module_11.4_vector",
+        "description": "module_11.4_vector",
+        "peekOfCode": "class Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y\n    @property\n    def x(self):\n        return self.__x\n    @x.setter",
+        "detail": "module_11.4_vector",
+        "documentation": {}
+    },
+    {
+        "label": "Vector",
+        "kind": 6,
+        "importPath": "module_11.4_vector",
+        "description": "module_11.4_vector",
+        "peekOfCode": "class Vector:\n    def __init__(self, coordinates):\n        self.coordinates = coordinates\n    def __getitem__(self, index):\n        match index:\n            case 0:\n                return self.coordinates.x\n            case 1:\n                return self.coordinates.y\n            case _:",
+        "detail": "module_11.4_vector",
+        "documentation": {}
+    },
+    {
+        "label": "vector",
+        "kind": 5,
+        "importPath": "module_11.4_vector",
+        "description": "module_11.4_vector",
+        "peekOfCode": "vector = Vector(Point(1, 10))\nprint(vector.coordinates.x)  # 1\nprint(vector.coordinates.y)  # 10\nvector[0] = 10  # Set the x coordinate of the vector to 10\nprint(vector[0])  # 10\nprint(vector[1])  # 10\nTo get a value using the square brackets of the print(vector[0]) object, you have to implement the __getitem__ method of the Vector class.\nTo store the value of a vector's coordinates using an index, like vector[0] = 10, implement the method __setitem__ in the Vector class.\nThe x coordinate is accessed at index 0, and the y coordinate is accessed at index 1.\n\"\"\"",
+        "detail": "module_11.4_vector",
+        "documentation": {}
+    },
+    {
+        "label": "vector[0]",
+        "kind": 5,
+        "importPath": "module_11.4_vector",
+        "description": "module_11.4_vector",
+        "peekOfCode": "vector[0] = 10  # Set the x coordinate of the vector to 10\nprint(vector[0])  # 10\nprint(vector[1])  # 10\nTo get a value using the square brackets of the print(vector[0]) object, you have to implement the __getitem__ method of the Vector class.\nTo store the value of a vector's coordinates using an index, like vector[0] = 10, implement the method __setitem__ in the Vector class.\nThe x coordinate is accessed at index 0, and the y coordinate is accessed at index 1.\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None",
+        "detail": "module_11.4_vector",
+        "documentation": {}
+    },
+    {
+        "label": "vector",
+        "kind": 5,
+        "importPath": "module_11.4_vector",
+        "description": "module_11.4_vector",
+        "peekOfCode": "vector = Vector(Point(1, 10))\nprint(vector.coordinates.x)  # Output: 1\nprint(vector.coordinates.y)  # Output: 10\nvector[0] = 10  # Set the x coordinate of the vector to 10",
+        "detail": "module_11.4_vector",
+        "documentation": {}
+    },
+    {
+        "label": "vector[0]",
+        "kind": 5,
+        "importPath": "module_11.4_vector",
+        "description": "module_11.4_vector",
+        "peekOfCode": "vector[0] = 10  # Set the x coordinate of the vector to 10",
+        "detail": "module_11.4_vector",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "kind": 6,
+        "importPath": "module_11.5_str",
+        "description": "module_11.5_str",
+        "peekOfCode": "class Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y\n    @property\n    def x(self):\n        return self.__x\n    @x.setter",
+        "detail": "module_11.5_str",
+        "documentation": {}
+    },
+    {
+        "label": "Vector",
+        "kind": 6,
+        "importPath": "module_11.5_str",
+        "description": "module_11.5_str",
+        "peekOfCode": "class Vector:\n    def __init__(self, coordinates):\n        self.coordinates = coordinates\n    def __getitem__(self, index):\n        match index:\n            case 0:\n                return self.coordinates.x\n            case 1:\n                return self.coordinates.y\n            case _:",
+        "detail": "module_11.5_str",
+        "documentation": {}
+    },
+    {
+        "label": "point",
+        "kind": 5,
+        "importPath": "module_11.5_str",
+        "description": "module_11.5_str",
+        "peekOfCode": "point = Point(1, 10)\nvector = Vector(point)\nprint(point)  # Point(1,10)\nprint(vector)  # Vector(1,10)\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x",
+        "detail": "module_11.5_str",
+        "documentation": {}
+    },
+    {
+        "label": "vector",
+        "kind": 5,
+        "importPath": "module_11.5_str",
+        "description": "module_11.5_str",
+        "peekOfCode": "vector = Vector(point)\nprint(point)  # Point(1,10)\nprint(vector)  # Vector(1,10)\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y",
+        "detail": "module_11.5_str",
+        "documentation": {}
+    },
+    {
+        "label": "vector",
+        "kind": 5,
+        "importPath": "module_11.5_str",
+        "description": "module_11.5_str",
+        "peekOfCode": "vector = Vector(Point(1, 10))\nprint(vector.coordinates.x)  # Output: 1\nprint(vector.coordinates.y)  # Output: 10\nvector[0] = 10  # Set the x coordinate of the vector to 10",
+        "detail": "module_11.5_str",
+        "documentation": {}
+    },
+    {
+        "label": "vector[0]",
+        "kind": 5,
+        "importPath": "module_11.5_str",
+        "description": "module_11.5_str",
+        "peekOfCode": "vector[0] = 10  # Set the x coordinate of the vector to 10",
+        "detail": "module_11.5_str",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "kind": 6,
+        "importPath": "module_11.6_call",
+        "description": "module_11.6_call",
+        "peekOfCode": "class Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y\n    @property\n    def x(self):\n        return self.__x\n    @x.setter",
+        "detail": "module_11.6_call",
+        "documentation": {}
+    },
+    {
+        "label": "Vector",
+        "kind": 6,
+        "importPath": "module_11.6_call",
+        "description": "module_11.6_call",
+        "peekOfCode": "class Vector:\n    def __init__(self, coordinates):\n        self.coordinates = coordinates\n    def __getitem__(self, index):\n        match index:\n            case 0:\n                return self.coordinates.x\n            case 1:\n                return self.coordinates.y\n            case _:",
+        "detail": "module_11.6_call",
+        "documentation": {}
+    },
+    {
+        "label": "vector",
+        "kind": 5,
+        "importPath": "module_11.6_call",
+        "description": "module_11.6_call",
+        "peekOfCode": "vector = Vector(Point(1, 10))\nprint(vector())  # (1, 10)\nWhen you call a class instance as a function, it returns a tuple with the coordinates of the vector.\nIf we transfer the number parameter when calling, we perform the product of the vector by the number: \nwe multiply each coordinate by the specified number and return a tuple with the new vector coordinates.\nvector = Vector(Point(1, 10))\nprint(vector(5))  # (5, 50)\n\"\"\"\nclass Point:\n    def __init__(self, x, y):",
+        "detail": "module_11.6_call",
+        "documentation": {}
+    },
+    {
+        "label": "vector",
+        "kind": 5,
+        "importPath": "module_11.6_call",
+        "description": "module_11.6_call",
+        "peekOfCode": "vector = Vector(Point(1, 10))\nprint(vector(5))  # (5, 50)\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y\n    @property",
+        "detail": "module_11.6_call",
+        "documentation": {}
+    },
+    {
+        "label": "vector",
+        "kind": 5,
+        "importPath": "module_11.6_call",
+        "description": "module_11.6_call",
+        "peekOfCode": "vector = Vector(Point(1, 10))\nprint(vector.coordinates.x)  # Output: 1\nprint(vector.coordinates.y)  # Output: 10\nprint(vector()) \nprint(vector(5))  \nvector[0] = 10  # Set the x coordinate of the vector to 10",
+        "detail": "module_11.6_call",
+        "documentation": {}
+    },
+    {
+        "label": "vector[0]",
+        "kind": 5,
+        "importPath": "module_11.6_call",
+        "description": "module_11.6_call",
+        "peekOfCode": "vector[0] = 10  # Set the x coordinate of the vector to 10",
+        "detail": "module_11.6_call",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "kind": 6,
+        "importPath": "module_11.7_add_sub",
+        "description": "module_11.7_add_sub",
+        "peekOfCode": "class Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y\n    @property\n    def x(self):\n        return self.__x\n    @x.setter",
+        "detail": "module_11.7_add_sub",
+        "documentation": {}
+    },
+    {
+        "label": "Vector",
+        "kind": 6,
+        "importPath": "module_11.7_add_sub",
+        "description": "module_11.7_add_sub",
+        "peekOfCode": "class Vector:\n    def __init__(self, coordinates: Point):\n        self.coordinates = coordinates\n    def __setitem__(self, index, value):\n        if index == 0:\n            self.coordinates.x = value\n        if index == 1:\n            self.coordinates.y = value\n    def __getitem__(self, index):\n        if index == 0:",
+        "detail": "module_11.7_add_sub",
+        "documentation": {}
+    },
+    {
+        "label": "vector1",
+        "kind": 5,
+        "importPath": "module_11.7_add_sub",
+        "description": "module_11.7_add_sub",
+        "peekOfCode": "vector1 = Vector(Point(1, 10))\nvector2 = Vector(Point(10, 10))\nvector3 = vector2 + vector1\nvector4 = vector2 - vector1\nprint(vector3)  # Vector(11,20)\nprint(vector4)  # Vector(9,0)\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None",
+        "detail": "module_11.7_add_sub",
+        "documentation": {}
+    },
+    {
+        "label": "vector2",
+        "kind": 5,
+        "importPath": "module_11.7_add_sub",
+        "description": "module_11.7_add_sub",
+        "peekOfCode": "vector2 = Vector(Point(10, 10))\nvector3 = vector2 + vector1\nvector4 = vector2 - vector1\nprint(vector3)  # Vector(11,20)\nprint(vector4)  # Vector(9,0)\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None",
+        "detail": "module_11.7_add_sub",
+        "documentation": {}
+    },
+    {
+        "label": "vector3",
+        "kind": 5,
+        "importPath": "module_11.7_add_sub",
+        "description": "module_11.7_add_sub",
+        "peekOfCode": "vector3 = vector2 + vector1\nvector4 = vector2 - vector1\nprint(vector3)  # Vector(11,20)\nprint(vector4)  # Vector(9,0)\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x",
+        "detail": "module_11.7_add_sub",
+        "documentation": {}
+    },
+    {
+        "label": "vector4",
+        "kind": 5,
+        "importPath": "module_11.7_add_sub",
+        "description": "module_11.7_add_sub",
+        "peekOfCode": "vector4 = vector2 - vector1\nprint(vector3)  # Vector(11,20)\nprint(vector4)  # Vector(9,0)\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y",
+        "detail": "module_11.7_add_sub",
+        "documentation": {}
+    },
+    {
+        "label": "vector1",
+        "kind": 5,
+        "importPath": "module_11.7_add_sub",
+        "description": "module_11.7_add_sub",
+        "peekOfCode": "vector1 = Vector(Point(1, 10))\nvector2 = Vector(Point(10, 10))\nvector3 = vector2 + vector1\nvector4 = vector2 - vector1\nprint(vector3)  # Vector(11,20)\nprint(vector4)  # Vector(9,0)",
+        "detail": "module_11.7_add_sub",
+        "documentation": {}
+    },
+    {
+        "label": "vector2",
+        "kind": 5,
+        "importPath": "module_11.7_add_sub",
+        "description": "module_11.7_add_sub",
+        "peekOfCode": "vector2 = Vector(Point(10, 10))\nvector3 = vector2 + vector1\nvector4 = vector2 - vector1\nprint(vector3)  # Vector(11,20)\nprint(vector4)  # Vector(9,0)",
+        "detail": "module_11.7_add_sub",
+        "documentation": {}
+    },
+    {
+        "label": "vector3",
+        "kind": 5,
+        "importPath": "module_11.7_add_sub",
+        "description": "module_11.7_add_sub",
+        "peekOfCode": "vector3 = vector2 + vector1\nvector4 = vector2 - vector1\nprint(vector3)  # Vector(11,20)\nprint(vector4)  # Vector(9,0)",
+        "detail": "module_11.7_add_sub",
+        "documentation": {}
+    },
+    {
+        "label": "vector4",
+        "kind": 5,
+        "importPath": "module_11.7_add_sub",
+        "description": "module_11.7_add_sub",
+        "peekOfCode": "vector4 = vector2 - vector1\nprint(vector3)  # Vector(11,20)\nprint(vector4)  # Vector(9,0)",
+        "detail": "module_11.7_add_sub",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "kind": 6,
+        "importPath": "module_11.8_mul",
+        "description": "module_11.8_mul",
+        "peekOfCode": "class Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y\n    @property\n    def x(self):\n        return self.__x\n    @x.setter",
+        "detail": "module_11.8_mul",
+        "documentation": {}
+    },
+    {
+        "label": "Vector",
+        "kind": 6,
+        "importPath": "module_11.8_mul",
+        "description": "module_11.8_mul",
+        "peekOfCode": "class Vector:\n    def __init__(self, coordinates: Point):\n        self.coordinates = coordinates\n    def __setitem__(self, index, value):\n        if index == 0:\n            self.coordinates.x = value\n        if index == 1:\n            self.coordinates.y = value\n    def __getitem__(self, index):\n        if index == 0:",
+        "detail": "module_11.8_mul",
+        "documentation": {}
+    },
+    {
+        "label": "vector1",
+        "kind": 5,
+        "importPath": "module_11.8_mul",
+        "description": "module_11.8_mul",
+        "peekOfCode": "vector1 = Vector(Point(1, 10))\nvector2 = Vector(Point(10, 10))\nscalar = vector2 * vector1\nprint(scalar)  # 110\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x",
+        "detail": "module_11.8_mul",
+        "documentation": {}
+    },
+    {
+        "label": "vector2",
+        "kind": 5,
+        "importPath": "module_11.8_mul",
+        "description": "module_11.8_mul",
+        "peekOfCode": "vector2 = Vector(Point(10, 10))\nscalar = vector2 * vector1\nprint(scalar)  # 110\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y",
+        "detail": "module_11.8_mul",
+        "documentation": {}
+    },
+    {
+        "label": "scalar",
+        "kind": 5,
+        "importPath": "module_11.8_mul",
+        "description": "module_11.8_mul",
+        "peekOfCode": "scalar = vector2 * vector1\nprint(scalar)  # 110\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y\n    @property",
+        "detail": "module_11.8_mul",
+        "documentation": {}
+    },
+    {
+        "label": "vector1",
+        "kind": 5,
+        "importPath": "module_11.8_mul",
+        "description": "module_11.8_mul",
+        "peekOfCode": "vector1 = Vector(Point(1, 10))\nvector2 = Vector(Point(10, 10))\nscalar = vector2 * vector1\nprint(scalar)  # 110",
+        "detail": "module_11.8_mul",
+        "documentation": {}
+    },
+    {
+        "label": "vector2",
+        "kind": 5,
+        "importPath": "module_11.8_mul",
+        "description": "module_11.8_mul",
+        "peekOfCode": "vector2 = Vector(Point(10, 10))\nscalar = vector2 * vector1\nprint(scalar)  # 110",
+        "detail": "module_11.8_mul",
+        "documentation": {}
+    },
+    {
+        "label": "scalar",
+        "kind": 5,
+        "importPath": "module_11.8_mul",
+        "description": "module_11.8_mul",
+        "peekOfCode": "scalar = vector2 * vector1\nprint(scalar)  # 110",
+        "detail": "module_11.8_mul",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "kind": 6,
+        "importPath": "module_11.9_",
+        "description": "module_11.9_",
+        "peekOfCode": "class Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y\n    @property\n    def x(self):\n        return self.__x\n    @x.setter",
+        "detail": "module_11.9_",
+        "documentation": {}
+    },
+    {
+        "label": "Vector",
+        "kind": 6,
+        "importPath": "module_11.9_",
+        "description": "module_11.9_",
+        "peekOfCode": "class Vector:\n    def __init__(self, coordinates: Point):\n        self.coordinates = coordinates\n    def __setitem__(self, index, value):\n        if index == 0:\n            self.coordinates.x = value\n        if index == 1:\n            self.coordinates.y = value\n    def __getitem__(self, index):\n        if index == 0:",
+        "detail": "module_11.9_",
+        "documentation": {}
+    },
+    {
+        "label": "vector1",
+        "kind": 5,
+        "importPath": "module_11.9_",
+        "description": "module_11.9_",
+        "peekOfCode": "vector1 = Vector(Point(1, 10))\nvector2 = Vector(Point(10, 10))\nprint(vector1.len())  # 10.04987562112089\nprint(vector2.len())  # 14.142135623730951\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x",
+        "detail": "module_11.9_",
+        "documentation": {}
+    },
+    {
+        "label": "vector2",
+        "kind": 5,
+        "importPath": "module_11.9_",
+        "description": "module_11.9_",
+        "peekOfCode": "vector2 = Vector(Point(10, 10))\nprint(vector1.len())  # 10.04987562112089\nprint(vector2.len())  # 14.142135623730951\n\"\"\"\nclass Point:\n    def __init__(self, x, y):\n        self.__x = None\n        self.__y = None\n        self.x = x\n        self.y = y",
+        "detail": "module_11.9_",
+        "documentation": {}
+    },
+    {
+        "label": "vector1",
+        "kind": 5,
+        "importPath": "module_11.9_",
+        "description": "module_11.9_",
+        "peekOfCode": "vector1 = Vector(Point(1, 10))\nvector2 = Vector(Point(10, 10))\nprint(vector1.len())  # 10.04987562112089\nprint(vector2.len())  # 14.142135623730951",
+        "detail": "module_11.9_",
+        "documentation": {}
+    },
+    {
+        "label": "vector2",
+        "kind": 5,
+        "importPath": "module_11.9_",
+        "description": "module_11.9_",
+        "peekOfCode": "vector2 = Vector(Point(10, 10))\nprint(vector1.len())  # 10.04987562112089\nprint(vector2.len())  # 14.142135623730951",
+        "detail": "module_11.9_",
         "documentation": {}
     },
     {
@@ -691,246 +2228,381 @@
         "documentation": {}
     },
     {
-        "label": "get_cats_info",
-        "kind": 2,
-        "importPath": "module_6.4",
-        "description": "module_6.4",
-        "peekOfCode": "def get_cats_info(path):\n    cats_list = []\n    with open(path, \"r\") as file:\n        for line in file:\n            parts = line.strip().split(',')\n            cat_info = {\n                \"id\": parts[0],\n                \"name\": parts[1],\n                \"age\": parts[2]\n            }",
-        "detail": "module_6.4",
-        "documentation": {}
-    },
-    {
-        "label": "sanitize_file",
-        "kind": 2,
-        "importPath": "module_6.5",
-        "description": "module_6.5",
-        "peekOfCode": "def sanitize_file(source, output):\n     with open(source, \"r\") as file:\n         source_content = file.read()\n     prepared_content = ''.join(char for char in source_content if not char.isdigit())\n     with open(output, \"w\") as output:\n        output.write(prepared_content)",
-        "detail": "module_6.5",
-        "documentation": {}
-    },
-    {
-        "label": "save_credentials_users",
-        "kind": 2,
-        "importPath": "module_6.8",
-        "description": "module_6.8",
-        "peekOfCode": "def save_credentials_users(path, users_info):\n    with open(path, 'wb') as file:\n        for username, password in users_info.items():\n            line = f\"{username}:{password}\\n\"\n            file.write(line.encode())\n# Example usage:\nusers_info = {'andy': 'uyro18890D', 'steve': 'oppjM13LL9e'}\nsave_credentials_users('user_credentials.dat', users_info)",
-        "detail": "module_6.8",
-        "documentation": {}
-    },
-    {
-        "label": "users_info",
-        "kind": 5,
-        "importPath": "module_6.8",
-        "description": "module_6.8",
-        "peekOfCode": "users_info = {'andy': 'uyro18890D', 'steve': 'oppjM13LL9e'}\nsave_credentials_users('user_credentials.dat', users_info)",
-        "detail": "module_6.8",
-        "documentation": {}
-    },
-    {
-        "label": "get_credentials_users",
-        "kind": 2,
-        "importPath": "module_6.9",
-        "description": "module_6.9",
-        "peekOfCode": "def get_credentials_users(path):\n    credentials_list = []\n    with open(path, 'rb') as file:\n        for line in file:\n            credentials_list.append(line.decode().strip())\n    return credentials_list\n# Example usage:\nfile_path = 'user_credentials.dat'\nresult = get_credentials_users(file_path)\nprint(result)",
-        "detail": "module_6.9",
-        "documentation": {}
-    },
-    {
-        "label": "file_path",
-        "kind": 5,
-        "importPath": "module_6.9",
-        "description": "module_6.9",
-        "peekOfCode": "file_path = 'user_credentials.dat'\nresult = get_credentials_users(file_path)\nprint(result)",
-        "detail": "module_6.9",
-        "documentation": {}
-    },
-    {
-        "label": "result",
-        "kind": 5,
-        "importPath": "module_6.9",
-        "description": "module_6.9",
-        "peekOfCode": "result = get_credentials_users(file_path)\nprint(result)",
-        "detail": "module_6.9",
-        "documentation": {}
-    },
-    {
         "label": "create_backup",
         "kind": 2,
-        "importPath": "module_6.archive",
-        "description": "module_6.archive",
-        "peekOfCode": "def create_backup(path, file_name, employee_residence):\n    # Step 1: Save the employee_residence dictionary to a binary file\n    with open(f\"{path}/{file_name}\", 'wb') as file:\n        for username, residence in employee_residence.items():\n            line = f\"{username} {residence}\\n\"\n            file.write(line.encode())\n    # Step 2: Archive the folder at the specified path\n    archive_path = shutil.make_archive(f\"{path}/backup_folder\", 'zip', path)\n    return archive_path\n# Example usage:",
-        "detail": "module_6.archive",
+        "importPath": "module_6.10_create_backup(archive)",
+        "description": "module_6.10_create_backup(archive)",
+        "peekOfCode": "def create_backup(path, file_name, employee_residence):\n    with open(f\"{path}/{file_name}\", 'wb') as file:\n        for username, residence in employee_residence.items():\n            line = f\"{username} {residence}\\n\"\n            file.write(line.encode())\n    archive_path = shutil.make_archive(f\"{path}/backup_folder\", 'zip', path)\n    return archive_path\n# Приклад використання:\nemployee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.txt'",
+        "detail": "module_6.10_create_backup(archive)",
         "documentation": {}
     },
     {
         "label": "employee_residence",
         "kind": 5,
-        "importPath": "module_6.archive",
-        "description": "module_6.archive",
-        "peekOfCode": "employee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nresult = create_backup('./', 'employee_data.dat', employee_residence)\nprint(result)",
-        "detail": "module_6.archive",
+        "importPath": "module_6.10_create_backup(archive)",
+        "description": "module_6.10_create_backup(archive)",
+        "peekOfCode": "employee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.txt'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))\n# Example usage:\nemployee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "module_6.10_create_backup(archive)",
         "documentation": {}
     },
     {
-        "label": "result",
+        "label": "file_name",
         "kind": 5,
-        "importPath": "module_6.archive",
-        "description": "module_6.archive",
-        "peekOfCode": "result = create_backup('./', 'employee_data.dat', employee_residence)\nprint(result)",
-        "detail": "module_6.archive",
+        "importPath": "module_6.10_create_backup(archive)",
+        "description": "module_6.10_create_backup(archive)",
+        "peekOfCode": "file_name = 'employee_data.txt'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))\n# Example usage:\nemployee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "module_6.10_create_backup(archive)",
         "documentation": {}
     },
     {
-        "label": "is_equal_string",
-        "kind": 2,
-        "importPath": "module_6.encoding",
-        "description": "module_6.encoding",
-        "peekOfCode": "def is_equal_string(utf8_string, utf16_string):\n    try:\n        # Decode utf8_string and utf16_string to Unicode strings\n        unicode_utf8 = utf8_string.decode('utf-8')\n        unicode_utf16 = utf16_string.decode('utf-16')\n        # Compare the Unicode strings\n        return unicode_utf8 == unicode_utf16\n    except UnicodeDecodeError:\n        # Handle decoding errors (e.g., invalid encoding)\n        return False",
-        "detail": "module_6.encoding",
-        "documentation": {}
-    },
-    {
-        "label": "utf8_str",
+        "label": "path",
         "kind": 5,
-        "importPath": "module_6.encoding",
-        "description": "module_6.encoding",
-        "peekOfCode": "utf8_str = b'This is a utf-8 string'\nutf16_str = b'\\xff\\xfeT\\x00h\\x00i\\x00s\\x00 \\x00i\\x00s\\x00 \\x00a\\x00 \\x00u\\x00t\\x00f\\x00-\\x008\\x00 \\x00s\\x00t\\x00r\\x00i\\x00n\\x00g\\x00\\x00\\x00'\nresult = is_equal_string(utf8_str, utf16_str)\nprint(result)",
-        "detail": "module_6.encoding",
+        "importPath": "module_6.10_create_backup(archive)",
+        "description": "module_6.10_create_backup(archive)",
+        "peekOfCode": "path = './module_6/'\nprint(create_backup(path, file_name, employee_residence))\n# Example usage:\nemployee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "module_6.10_create_backup(archive)",
         "documentation": {}
     },
     {
-        "label": "utf16_str",
+        "label": "employee_residence",
         "kind": 5,
-        "importPath": "module_6.encoding",
-        "description": "module_6.encoding",
-        "peekOfCode": "utf16_str = b'\\xff\\xfeT\\x00h\\x00i\\x00s\\x00 \\x00i\\x00s\\x00 \\x00a\\x00 \\x00u\\x00t\\x00f\\x00-\\x008\\x00 \\x00s\\x00t\\x00r\\x00i\\x00n\\x00g\\x00\\x00\\x00'\nresult = is_equal_string(utf8_str, utf16_str)\nprint(result)",
-        "detail": "module_6.encoding",
+        "importPath": "module_6.10_create_backup(archive)",
+        "description": "module_6.10_create_backup(archive)",
+        "peekOfCode": "employee_residence = {'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}\nfile_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "module_6.10_create_backup(archive)",
         "documentation": {}
     },
     {
-        "label": "result",
+        "label": "file_name",
         "kind": 5,
-        "importPath": "module_6.encoding",
-        "description": "module_6.encoding",
-        "peekOfCode": "result = is_equal_string(utf8_str, utf16_str)\nprint(result)",
-        "detail": "module_6.encoding",
+        "importPath": "module_6.10_create_backup(archive)",
+        "description": "module_6.10_create_backup(archive)",
+        "peekOfCode": "file_name = 'employee_data.dat'\npath = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "module_6.10_create_backup(archive)",
         "documentation": {}
     },
     {
-        "label": "save_applicant_data",
-        "kind": 2,
-        "importPath": "module_6.files",
-        "description": "module_6.files",
-        "peekOfCode": "def save_applicant_data(source, output):\n    with open(output, \"w\") as output:\n        for application in source:\n            prepared_content = f\"{application['name']},{application['specialty']},{application['math']},{application['lang']},{application['eng']}\\n\"\n            output.write(prepared_content)  \ndef save_applicant_data(source, output):\n    # Open the output file in \"w\" mode using a with statement\n    with open(output, \"w\") as output_file:\n        # Iterate through each applicant in the source list\n        for applicant in source:",
-        "detail": "module_6.files",
-        "documentation": {}
-    },
-    {
-        "label": "save_applicant_data",
-        "kind": 2,
-        "importPath": "module_6.files",
-        "description": "module_6.files",
-        "peekOfCode": "def save_applicant_data(source, output):\n    # Open the output file in \"w\" mode using a with statement\n    with open(output, \"w\") as output_file:\n        # Iterate through each applicant in the source list\n        for applicant in source:\n            # Create a formatted string with applicant's data\n            applicant_data = f\"{applicant['name']},{applicant['specialty']},{applicant['math']},{applicant['lang']},{applicant['eng']}\\n\"\n            # Write the formatted string to the output file\n            output_file.write(applicant_data)\nsource = [",
-        "detail": "module_6.files",
-        "documentation": {}
-    },
-    {
-        "label": "source",
+        "label": "path",
         "kind": 5,
-        "importPath": "module_6.files",
-        "description": "module_6.files",
-        "peekOfCode": "source = [\n    {\n        \"name\": \"Kovalchuk Oleksiy\",\n        \"specialty\": 301,\n        \"math\": 175,\n        \"lang\": 180,\n        \"eng\": 155,\n    },\n    {\n        \"name\": \"Ivanchuk Boryslav\",",
-        "detail": "module_6.files",
+        "importPath": "module_6.10_create_backup(archive)",
+        "description": "module_6.10_create_backup(archive)",
+        "peekOfCode": "path = './module_6/'\nprint(create_backup(path, file_name, employee_residence))",
+        "detail": "module_6.10_create_backup(archive)",
         "documentation": {}
     },
     {
         "label": "unpack",
         "kind": 2,
-        "importPath": "module_6.unpack_archive",
-        "description": "module_6.unpack_archive",
-        "peekOfCode": "def unpack(archive_path, path_to_unpack):\n    shutil.unpack_archive(archive_path, path_to_unpack)\n# Example usage:\narchive_path = './backup_folder.zip'\npath_to_unpack = './'\nunpack(archive_path, path_to_unpack)",
-        "detail": "module_6.unpack_archive",
+        "importPath": "module_6.11_unpack_archive",
+        "description": "module_6.11_unpack_archive",
+        "peekOfCode": "def unpack(archive_path, path_to_unpack):\n    shutil.unpack_archive(archive_path, path_to_unpack)\n# Example usage:\narchive_path = './Users/kornyshevaekaterina/Documents/GoIt/Projects/first_repo/module_6/backup_folder.zip'\npath_to_unpack = './module_6/'\nunpack(archive_path, path_to_unpack)",
+        "detail": "module_6.11_unpack_archive",
         "documentation": {}
     },
     {
         "label": "archive_path",
         "kind": 5,
-        "importPath": "module_6.unpack_archive",
-        "description": "module_6.unpack_archive",
-        "peekOfCode": "archive_path = './backup_folder.zip'\npath_to_unpack = './'\nunpack(archive_path, path_to_unpack)",
-        "detail": "module_6.unpack_archive",
+        "importPath": "module_6.11_unpack_archive",
+        "description": "module_6.11_unpack_archive",
+        "peekOfCode": "archive_path = './Users/kornyshevaekaterina/Documents/GoIt/Projects/first_repo/module_6/backup_folder.zip'\npath_to_unpack = './module_6/'\nunpack(archive_path, path_to_unpack)",
+        "detail": "module_6.11_unpack_archive",
         "documentation": {}
     },
     {
         "label": "path_to_unpack",
         "kind": 5,
-        "importPath": "module_6.unpack_archive",
-        "description": "module_6.unpack_archive",
-        "peekOfCode": "path_to_unpack = './'\nunpack(archive_path, path_to_unpack)",
-        "detail": "module_6.unpack_archive",
+        "importPath": "module_6.11_unpack_archive",
+        "description": "module_6.11_unpack_archive",
+        "peekOfCode": "path_to_unpack = './module_6/'\nunpack(archive_path, path_to_unpack)",
+        "detail": "module_6.11_unpack_archive",
+        "documentation": {}
+    },
+    {
+        "label": "write_employees_to_file",
+        "kind": 2,
+        "importPath": "module_6.1_write_employees_to_file",
+        "description": "module_6.1_write_employees_to_file",
+        "peekOfCode": "def write_employees_to_file(employee_list, path):\n    file = open(path, \"w\")\n    for department in employee_list:\n        for employee in department:\n            file.write(employee + \"\\n\")\n    file.close()\nemployee_list = [['60b90c1c13067a15887e1ae1,Tayson,3', '60b90c2413067a15887e1ae2,Vika,1'], ['60b90c2e13067a15887e1ae3,Barsik,2']]\npath_to_file = \"./module_6/employees.txt\"\nwrite_employees_to_file(employee_list, path_to_file)",
+        "detail": "module_6.1_write_employees_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "employee_list",
+        "kind": 5,
+        "importPath": "module_6.1_write_employees_to_file",
+        "description": "module_6.1_write_employees_to_file",
+        "peekOfCode": "employee_list = [['60b90c1c13067a15887e1ae1,Tayson,3', '60b90c2413067a15887e1ae2,Vika,1'], ['60b90c2e13067a15887e1ae3,Barsik,2']]\npath_to_file = \"./module_6/employees.txt\"\nwrite_employees_to_file(employee_list, path_to_file)",
+        "detail": "module_6.1_write_employees_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "path_to_file",
+        "kind": 5,
+        "importPath": "module_6.1_write_employees_to_file",
+        "description": "module_6.1_write_employees_to_file",
+        "peekOfCode": "path_to_file = \"./module_6/employees.txt\"\nwrite_employees_to_file(employee_list, path_to_file)",
+        "detail": "module_6.1_write_employees_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "read_employees_from_file",
+        "kind": 2,
+        "importPath": "module_6.2_read_employees_from_file",
+        "description": "module_6.2_read_employees_from_file",
+        "peekOfCode": "def read_employees_from_file(path):\n    file = open(path, \"r\")\n    employees = [line.strip() for line in file.readlines()]\n    file.close()\n    return employees\npath_to_file = \"./module_6/employees.txt\"\nemployees_list = read_employees_from_file(path_to_file)\nprint(employees_list)",
+        "detail": "module_6.2_read_employees_from_file",
+        "documentation": {}
+    },
+    {
+        "label": "path_to_file",
+        "kind": 5,
+        "importPath": "module_6.2_read_employees_from_file",
+        "description": "module_6.2_read_employees_from_file",
+        "peekOfCode": "path_to_file = \"./module_6/employees.txt\"\nemployees_list = read_employees_from_file(path_to_file)\nprint(employees_list)",
+        "detail": "module_6.2_read_employees_from_file",
+        "documentation": {}
+    },
+    {
+        "label": "employees_list",
+        "kind": 5,
+        "importPath": "module_6.2_read_employees_from_file",
+        "description": "module_6.2_read_employees_from_file",
+        "peekOfCode": "employees_list = read_employees_from_file(path_to_file)\nprint(employees_list)",
+        "detail": "module_6.2_read_employees_from_file",
+        "documentation": {}
+    },
+    {
+        "label": "add_employee_to_file",
+        "kind": 2,
+        "importPath": "module_6.3_add_employee_to_file",
+        "description": "module_6.3_add_employee_to_file",
+        "peekOfCode": "def add_employee_to_file(record, path):\n    file = open(path, \"a\")\n    file.write(record + \"\\n\")\n    file.close()\npath_to_file = \"./module_6/employees.txt\"\nemployee_record = \"60b90c1c13067a15887e1ae1,Tayson,3\"\nadd_employee_to_file(employee_record, path_to_file)",
+        "detail": "module_6.3_add_employee_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "path_to_file",
+        "kind": 5,
+        "importPath": "module_6.3_add_employee_to_file",
+        "description": "module_6.3_add_employee_to_file",
+        "peekOfCode": "path_to_file = \"./module_6/employees.txt\"\nemployee_record = \"60b90c1c13067a15887e1ae1,Tayson,3\"\nadd_employee_to_file(employee_record, path_to_file)",
+        "detail": "module_6.3_add_employee_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "employee_record",
+        "kind": 5,
+        "importPath": "module_6.3_add_employee_to_file",
+        "description": "module_6.3_add_employee_to_file",
+        "peekOfCode": "employee_record = \"60b90c1c13067a15887e1ae1,Tayson,3\"\nadd_employee_to_file(employee_record, path_to_file)",
+        "detail": "module_6.3_add_employee_to_file",
+        "documentation": {}
+    },
+    {
+        "label": "sanitize_file",
+        "kind": 2,
+        "importPath": "module_6.5_sanitize_file copy",
+        "description": "module_6.5_sanitize_file copy",
+        "peekOfCode": "def sanitize_file(source, output):\n     with open(source, \"r\") as file:\n         source_content = file.read()\n     prepared_content = ''.join(char for char in source_content if not char.isdigit())\n     with open(output, \"w\") as output:\n        output.write(prepared_content) \nsource_file_path = \"./module_6/employees.txt\"\noutput_file_path = \"./module_6/output.txt\"\nsanitize_file(source_file_path, output_file_path)",
+        "detail": "module_6.5_sanitize_file copy",
+        "documentation": {}
+    },
+    {
+        "label": "source_file_path",
+        "kind": 5,
+        "importPath": "module_6.5_sanitize_file copy",
+        "description": "module_6.5_sanitize_file copy",
+        "peekOfCode": "source_file_path = \"./module_6/employees.txt\"\noutput_file_path = \"./module_6/output.txt\"\nsanitize_file(source_file_path, output_file_path)",
+        "detail": "module_6.5_sanitize_file copy",
+        "documentation": {}
+    },
+    {
+        "label": "output_file_path",
+        "kind": 5,
+        "importPath": "module_6.5_sanitize_file copy",
+        "description": "module_6.5_sanitize_file copy",
+        "peekOfCode": "output_file_path = \"./module_6/output.txt\"\nsanitize_file(source_file_path, output_file_path)",
+        "detail": "module_6.5_sanitize_file copy",
+        "documentation": {}
+    },
+    {
+        "label": "save_applicant_data",
+        "kind": 2,
+        "importPath": "module_6.6_save_applicant_data",
+        "description": "module_6.6_save_applicant_data",
+        "peekOfCode": "def save_applicant_data(source, output):\n    with open(output, \"w\") as output:\n        for application in source:\n            prepared_content = f\"{application['name']},{application['specialty']},{application['math']},{application['lang']},{application['eng']}\\n\"\n            output.write(prepared_content)  \nsource = [\n    {\n        \"name\": \"Kovalchuk Oleksiy\",\n        \"specialty\": 301,\n        \"math\": 175,",
+        "detail": "module_6.6_save_applicant_data",
+        "documentation": {}
+    },
+    {
+        "label": "source",
+        "kind": 5,
+        "importPath": "module_6.6_save_applicant_data",
+        "description": "module_6.6_save_applicant_data",
+        "peekOfCode": "source = [\n    {\n        \"name\": \"Kovalchuk Oleksiy\",\n        \"specialty\": 301,\n        \"math\": 175,\n        \"lang\": 180,\n        \"eng\": 155,\n    },\n    {\n        \"name\": \"Ivanchuk Boryslav\",",
+        "detail": "module_6.6_save_applicant_data",
+        "documentation": {}
+    },
+    {
+        "label": "output_path",
+        "kind": 5,
+        "importPath": "module_6.6_save_applicant_data",
+        "description": "module_6.6_save_applicant_data",
+        "peekOfCode": "output_path = \"./module_6/output.txt\"\nsave_applicant_data(source,output_path)",
+        "detail": "module_6.6_save_applicant_data",
+        "documentation": {}
+    },
+    {
+        "label": "logged_func",
+        "kind": 2,
+        "importPath": "module_6.7_is_equal_string(encoding_logging)",
+        "description": "module_6.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "def logged_func(func):\n    def inner(utf8_string, utf16_string):\n        print(f'called with {utf8_string}, {utf16_string}')\n        result = func(utf8_string, utf16_string)\n        print(f'result: {result}')\n        return result\n    return inner\n@logged_func\ndef is_equal_string(utf8_string, utf16_string):\n    try:",
+        "detail": "module_6.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "is_equal_string",
+        "kind": 2,
+        "importPath": "module_6.7_is_equal_string(encoding_logging)",
+        "description": "module_6.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "def is_equal_string(utf8_string, utf16_string):\n    try:\n        # Decode utf8_string and utf16_string to Unicode strings\n        unicode_utf8 = utf8_string.decode('utf-8')\n        unicode_utf16 = utf16_string.decode('utf-16')\n        # Compare the Unicode strings\n        return unicode_utf8 == unicode_utf16\n    except UnicodeDecodeError:\n        # Handle decoding errors (e.g., invalid encoding)\n        return False",
+        "detail": "module_6.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "utf8_str",
+        "kind": 5,
+        "importPath": "module_6.7_is_equal_string(encoding_logging)",
+        "description": "module_6.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "utf8_str = b'This is a utf-8 string'\nutf16_str = b'\\xff\\xfeT\\x00h\\x00i\\x00s\\x00 \\x00i\\x00s\\x00 \\x00a\\x00 \\x00u\\x00t\\x00f\\x00-\\x008\\x00 \\x00s\\x00t\\x00r\\x00i\\x00n\\x00g\\x00\\x00\\x00'\nresult = is_equal_string(utf8_str, utf16_str)\nprint(result)",
+        "detail": "module_6.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "utf16_str",
+        "kind": 5,
+        "importPath": "module_6.7_is_equal_string(encoding_logging)",
+        "description": "module_6.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "utf16_str = b'\\xff\\xfeT\\x00h\\x00i\\x00s\\x00 \\x00i\\x00s\\x00 \\x00a\\x00 \\x00u\\x00t\\x00f\\x00-\\x008\\x00 \\x00s\\x00t\\x00r\\x00i\\x00n\\x00g\\x00\\x00\\x00'\nresult = is_equal_string(utf8_str, utf16_str)\nprint(result)",
+        "detail": "module_6.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "module_6.7_is_equal_string(encoding_logging)",
+        "description": "module_6.7_is_equal_string(encoding_logging)",
+        "peekOfCode": "result = is_equal_string(utf8_str, utf16_str)\nprint(result)",
+        "detail": "module_6.7_is_equal_string(encoding_logging)",
+        "documentation": {}
+    },
+    {
+        "label": "save_credentials_users",
+        "kind": 2,
+        "importPath": "module_6.8_save_credentials_users",
+        "description": "module_6.8_save_credentials_users",
+        "peekOfCode": "def save_credentials_users(path, users_info):\n    with open(path, 'wb') as file:\n        for username, password in users_info.items():\n            line = f\"{username}:{password}\\n\"\n            file.write(line.encode())\nusers_info = {'andy': 'uyro18890D', 'steve': 'oppjM13LL9e'}\npath = './module_6/user_credentials.dat'\nsave_credentials_users(path, users_info)",
+        "detail": "module_6.8_save_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "users_info",
+        "kind": 5,
+        "importPath": "module_6.8_save_credentials_users",
+        "description": "module_6.8_save_credentials_users",
+        "peekOfCode": "users_info = {'andy': 'uyro18890D', 'steve': 'oppjM13LL9e'}\npath = './module_6/user_credentials.dat'\nsave_credentials_users(path, users_info)",
+        "detail": "module_6.8_save_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "module_6.8_save_credentials_users",
+        "description": "module_6.8_save_credentials_users",
+        "peekOfCode": "path = './module_6/user_credentials.dat'\nsave_credentials_users(path, users_info)",
+        "detail": "module_6.8_save_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "get_credentials_users",
+        "kind": 2,
+        "importPath": "module_6.9_get_credentials_users",
+        "description": "module_6.9_get_credentials_users",
+        "peekOfCode": "def get_credentials_users(path):\n    credentials_list = []\n    with open(path, 'rb') as file:\n        for line in file:\n            credentials_list.append(line.decode().strip())\n    return credentials_list\nfile_path = './module_6/user_credentials.dat'\nresult = get_credentials_users(file_path)\nprint(result)",
+        "detail": "module_6.9_get_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "file_path",
+        "kind": 5,
+        "importPath": "module_6.9_get_credentials_users",
+        "description": "module_6.9_get_credentials_users",
+        "peekOfCode": "file_path = './module_6/user_credentials.dat'\nresult = get_credentials_users(file_path)\nprint(result)",
+        "detail": "module_6.9_get_credentials_users",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "module_6.9_get_credentials_users",
+        "description": "module_6.9_get_credentials_users",
+        "peekOfCode": "result = get_credentials_users(file_path)\nprint(result)",
+        "detail": "module_6.9_get_credentials_users",
         "documentation": {}
     },
     {
         "label": "do_setup",
         "kind": 2,
-        "importPath": "module_7.1 copy",
-        "description": "module_7.1 copy",
-        "peekOfCode": "def do_setup(args_dict, requires):\n    setup(name=args_dict.get('name'),\n      version=args_dict.get('version'),\n      description=args_dict.get('description'),\n      url=args_dict.get('url'),\n      author=args_dict.get('author'),\n      author_email=args_dict.get('author_email'),\n      license=args_dict.get('license'),\n      packages=args_dict.get('packages'),\n      install_requires=requires",
-        "detail": "module_7.1 copy",
-        "documentation": {}
-    },
-    {
-        "label": "do_setup",
-        "kind": 2,
-        "importPath": "module_7.1",
-        "description": "module_7.1",
+        "importPath": "module_7.1_do_setup",
+        "description": "module_7.1_do_setup",
         "peekOfCode": "def do_setup(args_dict):\n    setup(name=args_dict.get('name'),\n      version=args_dict.get('version'),\n      description=args_dict.get('description'),\n      url=args_dict.get('url'),\n      author=args_dict.get('author'),\n      author_email=args_dict.get('author_email'),\n      license=args_dict.get('license'),\n      packages=args_dict.get('packages'),\n      )",
-        "detail": "module_7.1",
+        "detail": "module_7.1_do_setup",
         "documentation": {}
     },
     {
         "label": "do_setup",
         "kind": 2,
-        "importPath": "module_7.3",
-        "description": "module_7.3",
+        "importPath": "module_7.2_3_do_setup",
+        "description": "module_7.2_3_do_setup",
         "peekOfCode": "def do_setup(args_dict, requires, entry_points):\n    setup(name=args_dict['name'],\n          version=args_dict['version'],\n          description=args_dict['description'],\n          url=args_dict['url'],\n          author=args_dict['author'],\n          author_email=args_dict['author_email'],\n          license=args_dict['license'],\n          packages=args_dict['packages'],\n          install_requires=requires,",
-        "detail": "module_7.3",
+        "detail": "module_7.2_3_do_setup",
         "documentation": {}
     },
     {
         "label": "data_preparation",
         "kind": 2,
-        "importPath": "module_7.4",
-        "description": "module_7.4",
+        "importPath": "module_7.4_data_preparation",
+        "description": "module_7.4_data_preparation",
         "peekOfCode": "def data_preparation(list_data):\n    new_list = []\n    for element in list_data:\n        if (len(element) > 2):\n            new_list += sorted(element)[1:-1]\n        else:\n            new_list += element\n    return sorted(new_list, reverse=True)\nprint(data_preparation(([1, 2,], [3], [5, 6, 2])))",
-        "detail": "module_7.4",
+        "detail": "module_7.4_data_preparation",
         "documentation": {}
     },
     {
         "label": "all_sub_lists",
         "kind": 2,
-        "importPath": "module_7.5",
-        "description": "module_7.5",
+        "importPath": "module_7.5_all_sub_lists",
+        "description": "module_7.5_all_sub_lists",
         "peekOfCode": "def all_sub_lists(data):\n    sub_lists = [[]]\n    if (len(data) == 0):\n        return sub_lists\n    for j in range(1, len(data)):\n        for i in range(len(data) - j + 1):\n            sub_lists.append(data[i:(j+i)])\n    sub_lists.append(data)\n    return sub_lists\nlist = [4, 6, 1, 3]",
-        "detail": "module_7.5",
+        "detail": "module_7.5_all_sub_lists",
         "documentation": {}
     },
     {
         "label": "list",
         "kind": 5,
-        "importPath": "module_7.5",
-        "description": "module_7.5",
+        "importPath": "module_7.5_all_sub_lists",
+        "description": "module_7.5_all_sub_lists",
         "peekOfCode": "list = [4, 6, 1, 3]\nprint(all_sub_lists(list))\n# print(list[0:1])\n# print(list[1:2])\n# print(list[2:3])\n# print(list[3:4])\n# print(list[0:2])\n# print(list[1:3])\n# print(list[2:4])\n# print(list[0:3])",
-        "detail": "module_7.5",
+        "detail": "module_7.5_all_sub_lists",
         "documentation": {}
     },
     {
         "label": "make_request",
         "kind": 2,
-        "importPath": "module_7.6",
-        "description": "module_7.6",
+        "importPath": "module_7.6_make_request",
+        "description": "module_7.6_make_request",
         "peekOfCode": "def make_request(keys, values):\n    empty_dict = {}\n    if len(keys) != len(values):\n        return empty_dict\n    for key, value in zip(keys, values):\n        empty_dict[key] = value \n    return empty_dict\nprint(make_request([11,22,33], [4,6,7]))",
-        "detail": "module_7.6",
+        "detail": "module_7.6_make_request",
         "documentation": {}
     },
     {
@@ -981,28 +2653,28 @@
     {
         "label": "to_indexed",
         "kind": 2,
-        "importPath": "module_7.9",
-        "description": "module_7.9",
+        "importPath": "module_7.9_to_indexed",
+        "description": "module_7.9_to_indexed",
         "peekOfCode": "def to_indexed(source_file, output_file):\n     with open(source_file, 'r') as f_in, open(output_file, 'w') as f_out:\n        for index, line in enumerate(f_in):\n            indexed_line = f\"{index}: {line}\" \n            f_out.write(indexed_line) \n# Приклад використання\nsource_file = 'module_7/input.txt'\noutput_file = 'module_7/output.txt'\nto_indexed(source_file, output_file)",
-        "detail": "module_7.9",
+        "detail": "module_7.9_to_indexed",
         "documentation": {}
     },
     {
         "label": "source_file",
         "kind": 5,
-        "importPath": "module_7.9",
-        "description": "module_7.9",
+        "importPath": "module_7.9_to_indexed",
+        "description": "module_7.9_to_indexed",
         "peekOfCode": "source_file = 'module_7/input.txt'\noutput_file = 'module_7/output.txt'\nto_indexed(source_file, output_file)",
-        "detail": "module_7.9",
+        "detail": "module_7.9_to_indexed",
         "documentation": {}
     },
     {
         "label": "output_file",
         "kind": 5,
-        "importPath": "module_7.9",
-        "description": "module_7.9",
+        "importPath": "module_7.9_to_indexed",
+        "description": "module_7.9_to_indexed",
         "peekOfCode": "output_file = 'module_7/output.txt'\nto_indexed(source_file, output_file)",
-        "detail": "module_7.9",
+        "detail": "module_7.9_to_indexed",
         "documentation": {}
     },
     {
@@ -1080,28 +2752,262 @@
     {
         "label": "get_count_visits_from_ip",
         "kind": 2,
-        "importPath": "module_8.7",
-        "description": "module_8.7",
+        "importPath": "module_8.7_get_frequent_visit_from_ip",
+        "description": "module_8.7_get_frequent_visit_from_ip",
         "peekOfCode": "def get_count_visits_from_ip(ips):\n    return Counter(ips)\ndef get_frequent_visit_from_ip(ips):\n    count_visits = get_count_visits_from_ip(ips)\n    return count_visits.most_common()[0]\nprint(get_frequent_visit_from_ip([\n    \"85.157.172.254\",\n    \"85.157.172.254\",\n    \"85.157.172.258\",\n    \"85.157.172.252\",",
-        "detail": "module_8.7",
+        "detail": "module_8.7_get_frequent_visit_from_ip",
         "documentation": {}
     },
     {
         "label": "get_frequent_visit_from_ip",
         "kind": 2,
-        "importPath": "module_8.7",
-        "description": "module_8.7",
+        "importPath": "module_8.7_get_frequent_visit_from_ip",
+        "description": "module_8.7_get_frequent_visit_from_ip",
         "peekOfCode": "def get_frequent_visit_from_ip(ips):\n    count_visits = get_count_visits_from_ip(ips)\n    return count_visits.most_common()[0]\nprint(get_frequent_visit_from_ip([\n    \"85.157.172.254\",\n    \"85.157.172.254\",\n    \"85.157.172.258\",\n    \"85.157.172.252\",\n    \"85.157.172.253\",\n    \"85.157.172.253\",",
-        "detail": "module_8.7",
+        "detail": "module_8.7_get_frequent_visit_from_ip",
         "documentation": {}
     },
     {
         "label": "IP",
         "kind": 5,
-        "importPath": "module_8.7",
-        "description": "module_8.7",
+        "importPath": "module_8.7_get_frequent_visit_from_ip",
+        "description": "module_8.7_get_frequent_visit_from_ip",
         "peekOfCode": "IP = [\n    \"85.157.172.253\",\n    ...\n]\nРеалізуйте дві функції. Перша get_count_visits_from_ip за допомогою Counter повертатиме словник, де ключ це IP, а значення – кількість входжень у вказаний список.\nПриклад:\n{\n    '85.157.172.253': 2,\n    ...\n}",
-        "detail": "module_8.7",
+        "detail": "module_8.7_get_frequent_visit_from_ip",
+        "documentation": {}
+    },
+    {
+        "label": "sum_numbers",
+        "kind": 2,
+        "importPath": "module_9.10_sum_numbers",
+        "description": "module_9.10_sum_numbers",
+        "peekOfCode": "def sum_numbers(numbers):\n    return reduce((lambda x, y: x + y), numbers)\nprint(sum_numbers([1, 2, 3, 4]))",
+        "detail": "module_9.10_sum_numbers",
+        "documentation": {}
+    },
+    {
+        "label": "logged_func",
+        "kind": 2,
+        "importPath": "module_9.1_get_student_grade_with_logger",
+        "description": "module_9.1_get_student_grade_with_logger",
+        "peekOfCode": "def logged_func(func):\n    def inner(option):\n        print(f'called with {option}')\n        result = func(option)\n        print(f'result: {result}')\n        return result\n    return inner\ndef get_grade(key):\n    grade = {\"A\": 5, \"B\": 5, \"C\": 4, \"D\": 3, \"E\": 3, \"FX\": 2, \"F\": 1}\n    return grade.get(key, None)",
+        "detail": "module_9.1_get_student_grade_with_logger",
+        "documentation": {}
+    },
+    {
+        "label": "get_grade",
+        "kind": 2,
+        "importPath": "module_9.1_get_student_grade_with_logger",
+        "description": "module_9.1_get_student_grade_with_logger",
+        "peekOfCode": "def get_grade(key):\n    grade = {\"A\": 5, \"B\": 5, \"C\": 4, \"D\": 3, \"E\": 3, \"FX\": 2, \"F\": 1}\n    return grade.get(key, None)\ndef get_description(key):\n    description = {\n        \"A\": \"Perfectly\",\n        \"B\": \"Very good\",\n        \"C\": \"Good\",\n        \"D\": \"Satisfactorily\",\n        \"E\": \"Enough\",",
+        "detail": "module_9.1_get_student_grade_with_logger",
+        "documentation": {}
+    },
+    {
+        "label": "get_description",
+        "kind": 2,
+        "importPath": "module_9.1_get_student_grade_with_logger",
+        "description": "module_9.1_get_student_grade_with_logger",
+        "peekOfCode": "def get_description(key):\n    description = {\n        \"A\": \"Perfectly\",\n        \"B\": \"Very good\",\n        \"C\": \"Good\",\n        \"D\": \"Satisfactorily\",\n        \"E\": \"Enough\",\n        \"FX\": \"Unsatisfactorily\",\n        \"F\": \"Unsatisfactorily\",\n    }",
+        "detail": "module_9.1_get_student_grade_with_logger",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_grade",
+        "kind": 2,
+        "importPath": "module_9.1_get_student_grade_with_logger",
+        "description": "module_9.1_get_student_grade_with_logger",
+        "peekOfCode": "def get_student_grade(option):\n    match option:\n        case \"grade\":\n            return get_grade\n        case \"description\":\n            return get_description\n        case _:\n            return None\nprint(get_student_grade(\"grade\"))",
+        "detail": "module_9.1_get_student_grade_with_logger",
+        "documentation": {}
+    },
+    {
+        "label": "get_discount_price_customer",
+        "kind": 2,
+        "importPath": "module_9.2_get_discount_price_customer",
+        "description": "module_9.2_get_discount_price_customer",
+        "peekOfCode": "def get_discount_price_customer(price: int, customer: dict) -> float:\n    \"\"\"\n    Function get discount price for customer\n    \"\"\"\n    customer_discount = customer.get('discount', None)\n    discount = customer_discount if customer_discount is not None else DEFAULT_DISCOUNT\n    return price * (1 - discount)\nprint(get_discount_price_customer(3,{\"name\": \"Boris\", \"discount\": 0.15}))\nprint(get_discount_price_customer(3,{\"name\": \"Boris\"}))",
+        "detail": "module_9.2_get_discount_price_customer",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_DISCOUNT",
+        "kind": 5,
+        "importPath": "module_9.2_get_discount_price_customer",
+        "description": "module_9.2_get_discount_price_customer",
+        "peekOfCode": "DEFAULT_DISCOUNT = 0.05\ndef get_discount_price_customer(price: int, customer: dict) -> float:\n    \"\"\"\n    Function get discount price for customer\n    \"\"\"\n    customer_discount = customer.get('discount', None)\n    discount = customer_discount if customer_discount is not None else DEFAULT_DISCOUNT\n    return price * (1 - discount)\nprint(get_discount_price_customer(3,{\"name\": \"Boris\", \"discount\": 0.15}))\nprint(get_discount_price_customer(3,{\"name\": \"Boris\"}))",
+        "detail": "module_9.2_get_discount_price_customer",
+        "documentation": {}
+    },
+    {
+        "label": "caching_fibonacci",
+        "kind": 2,
+        "importPath": "module_9.3_caching_fibonacci",
+        "description": "module_9.3_caching_fibonacci",
+        "peekOfCode": "def caching_fibonacci():\n    cache = {}  \n    def fibonacci(n):\n        if n in cache: \n            return cache.get(n)\n        if n <= 1:\n            return n\n        else:\n            fib = fibonacci(n - 1) + fibonacci(n - 2)\n            cache[n] = fib ",
+        "detail": "module_9.3_caching_fibonacci",
+        "documentation": {}
+    },
+    {
+        "label": "fibonacci_func",
+        "kind": 5,
+        "importPath": "module_9.3_caching_fibonacci",
+        "description": "module_9.3_caching_fibonacci",
+        "peekOfCode": "fibonacci_func = caching_fibonacci()\nprint(fibonacci_func(5))  # Виведе: 5\nprint(fibonacci_func(10))  # Виведе: 55",
+        "detail": "module_9.3_caching_fibonacci",
+        "documentation": {}
+    },
+    {
+        "label": "discount_price",
+        "kind": 2,
+        "importPath": "module_9.4_discount_price",
+        "description": "module_9.4_discount_price",
+        "peekOfCode": "def discount_price(discount):\n    def calculate_discounted_price(price):\n        return price * (1 - discount)\n    return calculate_discounted_price\ncost_15 = discount_price(0.15)\ncost_10 = discount_price(0.10)\ncost_05 = discount_price(0.05)\nprice = 100\nprint(cost_15(price))  # Виведе: 85.0\nprint(cost_10(price))  # Виведе: 90.0",
+        "detail": "module_9.4_discount_price",
+        "documentation": {}
+    },
+    {
+        "label": "cost_15",
+        "kind": 5,
+        "importPath": "module_9.4_discount_price",
+        "description": "module_9.4_discount_price",
+        "peekOfCode": "cost_15 = discount_price(0.15)\ncost_10 = discount_price(0.10)\ncost_05 = discount_price(0.05)\nprice = 100\nprint(cost_15(price))\nprint(cost_10(price))\nprint(cost_05(price))\nПовинен вивести:\n85.0\n90.0",
+        "detail": "module_9.4_discount_price",
+        "documentation": {}
+    },
+    {
+        "label": "cost_10",
+        "kind": 5,
+        "importPath": "module_9.4_discount_price",
+        "description": "module_9.4_discount_price",
+        "peekOfCode": "cost_10 = discount_price(0.10)\ncost_05 = discount_price(0.05)\nprice = 100\nprint(cost_15(price))\nprint(cost_10(price))\nprint(cost_05(price))\nПовинен вивести:\n85.0\n90.0\n95.0",
+        "detail": "module_9.4_discount_price",
+        "documentation": {}
+    },
+    {
+        "label": "cost_05",
+        "kind": 5,
+        "importPath": "module_9.4_discount_price",
+        "description": "module_9.4_discount_price",
+        "peekOfCode": "cost_05 = discount_price(0.05)\nprice = 100\nprint(cost_15(price))\nprint(cost_10(price))\nprint(cost_05(price))\nПовинен вивести:\n85.0\n90.0\n95.0\n'''",
+        "detail": "module_9.4_discount_price",
+        "documentation": {}
+    },
+    {
+        "label": "price",
+        "kind": 5,
+        "importPath": "module_9.4_discount_price",
+        "description": "module_9.4_discount_price",
+        "peekOfCode": "price = 100\nprint(cost_15(price))\nprint(cost_10(price))\nprint(cost_05(price))\nПовинен вивести:\n85.0\n90.0\n95.0\n'''\ndef discount_price(discount):",
+        "detail": "module_9.4_discount_price",
+        "documentation": {}
+    },
+    {
+        "label": "cost_15",
+        "kind": 5,
+        "importPath": "module_9.4_discount_price",
+        "description": "module_9.4_discount_price",
+        "peekOfCode": "cost_15 = discount_price(0.15)\ncost_10 = discount_price(0.10)\ncost_05 = discount_price(0.05)\nprice = 100\nprint(cost_15(price))  # Виведе: 85.0\nprint(cost_10(price))  # Виведе: 90.0\nprint(cost_05(price))  # Виведе: 95.0",
+        "detail": "module_9.4_discount_price",
+        "documentation": {}
+    },
+    {
+        "label": "cost_10",
+        "kind": 5,
+        "importPath": "module_9.4_discount_price",
+        "description": "module_9.4_discount_price",
+        "peekOfCode": "cost_10 = discount_price(0.10)\ncost_05 = discount_price(0.05)\nprice = 100\nprint(cost_15(price))  # Виведе: 85.0\nprint(cost_10(price))  # Виведе: 90.0\nprint(cost_05(price))  # Виведе: 95.0",
+        "detail": "module_9.4_discount_price",
+        "documentation": {}
+    },
+    {
+        "label": "cost_05",
+        "kind": 5,
+        "importPath": "module_9.4_discount_price",
+        "description": "module_9.4_discount_price",
+        "peekOfCode": "cost_05 = discount_price(0.05)\nprice = 100\nprint(cost_15(price))  # Виведе: 85.0\nprint(cost_10(price))  # Виведе: 90.0\nprint(cost_05(price))  # Виведе: 95.0",
+        "detail": "module_9.4_discount_price",
+        "documentation": {}
+    },
+    {
+        "label": "price",
+        "kind": 5,
+        "importPath": "module_9.4_discount_price",
+        "description": "module_9.4_discount_price",
+        "peekOfCode": "price = 100\nprint(cost_15(price))  # Виведе: 85.0\nprint(cost_10(price))  # Виведе: 90.0\nprint(cost_05(price))  # Виведе: 95.0",
+        "detail": "module_9.4_discount_price",
+        "documentation": {}
+    },
+    {
+        "label": "format_phone_number",
+        "kind": 2,
+        "importPath": "module_9.5_sanitize_phone_number",
+        "description": "module_9.5_sanitize_phone_number",
+        "peekOfCode": "def format_phone_number(func):\n    def inner(phone):\n        cleaned_phone = func(phone)\n        return '+' + cleaned_phone if len(cleaned_phone) == 12 else '+38' + cleaned_phone\n    return inner\n@format_phone_number\ndef sanitize_phone_number(phone):\n    return re.sub(r'\\D', '', phone)\n# def sanitize_phone_number(phone):\n#     new_phone = (",
+        "detail": "module_9.5_sanitize_phone_number",
+        "documentation": {}
+    },
+    {
+        "label": "sanitize_phone_number",
+        "kind": 2,
+        "importPath": "module_9.5_sanitize_phone_number",
+        "description": "module_9.5_sanitize_phone_number",
+        "peekOfCode": "def sanitize_phone_number(phone):\n    return re.sub(r'\\D', '', phone)\n# def sanitize_phone_number(phone):\n#     new_phone = (\n#         phone.strip()\n#             .removeprefix(\"+\")\n#             .replace(\"(\", \"\")\n#             .replace(\")\", \"\")\n#             .replace(\"-\", \"\")\n#             .replace(\" \", \"\")",
+        "detail": "module_9.5_sanitize_phone_number",
+        "documentation": {}
+    },
+    {
+        "label": "normal_name",
+        "kind": 2,
+        "importPath": "module_9.6_normal_name",
+        "description": "module_9.6_normal_name",
+        "peekOfCode": "def normal_name(list_name):\n    return list(map(lambda x: x.capitalize(), list_name))\nprint(normal_name([\"dan\", \"jane\", \"steve\", \"mike\"]))",
+        "detail": "module_9.6_normal_name",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "module_9.6_normal_name",
+        "description": "module_9.6_normal_name",
+        "peekOfCode": "name = [\"dan\", \"jane\", \"steve\", \"mike\"]\nРозробіть функцію normal_name, яка приймає список імен та повертає теж список імен, але вже з правильними іменами з великої літери.\n['Dan', 'Jane', 'Steve', 'Mike']\nНеобхідно використовувати функцію map. Не забудьте, що необхідно виконати перетворення типів для map.\n'''\ndef normal_name(list_name):\n    return list(map(lambda x: x.capitalize(), list_name))\nprint(normal_name([\"dan\", \"jane\", \"steve\", \"mike\"]))",
+        "detail": "module_9.6_normal_name",
+        "documentation": {}
+    },
+    {
+        "label": "get_emails",
+        "kind": 2,
+        "importPath": "module_9.7_get_emails",
+        "description": "module_9.7_get_emails",
+        "peekOfCode": "def get_emails(list_contacts):\n    return list(map(lambda x: x.get('email', None), list_contacts))\nprint(get_emails([\n    {\n    \"name\": \"Allen Raymond\",\n    \"email\": \"nulla.ante@vestibul.co.uk\",\n    \"phone\": \"(992) 914-3792\",\n    \"favorite\": False,\n    },\n    {",
+        "detail": "module_9.7_get_emails",
+        "documentation": {}
+    },
+    {
+        "label": "positive_values",
+        "kind": 2,
+        "importPath": "module_9.8_positive_values",
+        "description": "module_9.8_positive_values",
+        "peekOfCode": "def positive_values(list_payment):\n    return list(filter(lambda x: x > 0, list_payment))\nprint(positive_values([100, -3, 400, 35, -100]))",
+        "detail": "module_9.8_positive_values",
+        "documentation": {}
+    },
+    {
+        "label": "payment",
+        "kind": 5,
+        "importPath": "module_9.8_positive_values",
+        "description": "module_9.8_positive_values",
+        "peekOfCode": "payment = [100, -3, 400, 35, -100]\n'''\ndef positive_values(list_payment):\n    return list(filter(lambda x: x > 0, list_payment))\nprint(positive_values([100, -3, 400, 35, -100]))",
+        "detail": "module_9.8_positive_values",
+        "documentation": {}
+    },
+    {
+        "label": "get_favorites",
+        "kind": 2,
+        "importPath": "module_9.9_get_favorites",
+        "description": "module_9.9_get_favorites",
+        "peekOfCode": "def get_favorites(contacts):\n    return list(filter(lambda x: x.get('favorite') is True, contacts))\nprint(get_favorites([\n    {\n    \"name\": \"Allen Raymond\",\n    \"email\": \"nulla.ante@vestibul.co.uk\",\n    \"phone\": \"(992) 914-3792\",\n    \"favorite\": True,\n    },\n    {",
+        "detail": "module_9.9_get_favorites",
         "documentation": {}
     }
 ]
